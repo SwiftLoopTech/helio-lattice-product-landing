@@ -1,0 +1,12 @@
+{
+  "name": "helio-lattice-product-landing",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "npm --prefix website install && npm --prefix website run build",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.0"
+  }
+}

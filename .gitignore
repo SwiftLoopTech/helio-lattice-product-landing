@@ -5,6 +5,12 @@ _local/
 **/AGENT_DRAFTS/
 **/_drafts/
 
+# Dependencies / build
+node_modules/
+website/node_modules/
+website/dist/
+.wrangler/
+
 # OS / editor
 .DS_Store
 Thumbs.db
