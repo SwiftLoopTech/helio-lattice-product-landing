@@ -1,0 +1,13 @@
+# Local-only drafts — never commit
+local-drafts/
+_local/
+.local/
+**/AGENT_DRAFTS/
+**/_drafts/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

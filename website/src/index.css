@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "IBM Plex Sans", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.875rem;
+
+  --container-page: 1120px;
+}
+
+/* ---- Light (default) — warm paper, graphite ink, solar amber ---- */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --color-bg: #f7f5f1;
+  --color-bg-raised: #ffffff;
+  --color-panel: #ffffff;
+  --color-panel-2: #f0ece4;
+  --color-paper: #f3efe4;
+  --color-paper-ink: #211d16;
+  --color-paper-muted: #6f6754;
+
+  --color-ink: #14161a;
+  --color-ink-secondary: #4a4f57;
+  --color-ink-muted: #6b717b;
+  --color-ink-faint: #9aa0a8;
+
+  --color-line: rgba(20, 22, 26, 0.08);
+  --color-line-strong: rgba(20, 22, 26, 0.14);
+
+  --color-solar: #d4891a;
+  --color-solar-dim: #a86a12;
+  --color-solar-ink: #181206;
+  --color-signal: #1f6b63;
+  --color-signal-dim: #164f4a;
+  --color-logo-helio: #1c1f24;
+  --color-logo-lattice: #1f6b63;
+
+  --color-good: #0c8a0c;
+  --color-warning: #c98900;
+  --color-serious: #d66a3f;
+  --color-critical: #c23030;
+
+  --color-series-1: #2f6fc4;
+  --color-series-2: #c24f1f;
+  --color-series-3: #158a62;
+  --color-series-4: #b07800;
+
+  --shadow-mock: 0 28px 80px -40px rgba(20, 22, 26, 0.28);
+  --shadow-product: 0 20px 50px -28px rgba(20, 22, 26, 0.22);
+  --color-hover: rgba(20, 22, 26, 0.04);
+  --hover-wash: rgba(20, 22, 26, 0.04);
+  --blueprint-line: rgba(20, 22, 26, 0.045);
+}
+
+/* ---- Dark ---- */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #0b0c0d;
+  --color-bg-raised: #121417;
+  --color-panel: #15171b;
+  --color-panel-2: #1b1e23;
+  --color-paper: #f3efe4;
+  --color-paper-ink: #211d16;
+  --color-paper-muted: #6f6754;
+
+  --color-ink: #f4f2ec;
+  --color-ink-secondary: #b8bac0;
+  --color-ink-muted: #797d85;
+  --color-ink-faint: #4d5158;
+
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-strong: rgba(255, 255, 255, 0.16);
+
+  --color-solar: #f2a93b;
+  --color-solar-dim: #b9822c;
+  --color-solar-ink: #181206;
+  --color-signal: #34d8c4;
+  --color-signal-dim: #21877c;
+  --color-logo-helio: #f4f2ec;
+  --color-logo-lattice: #34d8c4;
+
+  --color-good: #0ca30c;
+  --color-warning: #fab219;
+  --color-serious: #ec835a;
+  --color-critical: #d03b3b;
+
+  --color-series-1: #3987e5;
+  --color-series-2: #d95926;
+  --color-series-3: #199e70;
+  --color-series-4: #c98500;
+
+  --shadow-mock: 0 40px 120px -40px rgba(0, 0, 0, 0.85);
+  --shadow-product: 0 40px 120px -40px rgba(0, 0, 0, 0.85);
+  --color-hover: rgba(255, 255, 255, 0.05);
+  --hover-wash: rgba(255, 255, 255, 0.05);
+  --blueprint-line: rgba(255, 255, 255, 0.035);
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+  }
+
+  body {
+    @apply bg-[var(--color-bg)] text-[var(--color-ink)] antialiased;
+    font-family: var(--font-body);
+  }
+
+  ::selection {
+    background: var(--color-solar);
+    color: #14100a;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-panel-2);
+    border-radius: 6px;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .bg-blueprint {
+    background-image:
+      linear-gradient(to right, var(--blueprint-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--blueprint-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hover-wash:hover {
+    background: var(--hover-wash);
+  }
+
+  .shadow-product {
+    box-shadow: var(--shadow-product);
+  }
+
+  /* Logo lockup: full PNG on light, mark + CSS wordmark on dark */
+  .logo-lockup-dark {
+    display: none;
+  }
+  [data-theme="dark"] .logo-lockup-light {
+    display: none;
+  }
+  [data-theme="dark"] .logo-lockup-dark {
+    display: inline-flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
