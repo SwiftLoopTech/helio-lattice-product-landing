@@ -18,15 +18,15 @@ Paste-and-continue context for a new chat or a new model. Read this first, then 
 | Built and verified (64 pages, `verify.cjs` all PASS incl. link and anchor checks) | Home, Demo, Product hub; 9 modules (sales, survey-quotation, delivery, materials, finance, service-amc, partners, reporting, access-control) plus notifications-whatsapp; 4 solutions; Problems hub + 9; Roles hub + 7; Integrations hub, Tally, WhatsApp; Pricing, Customers, Security, About, Contact, FAQ, Glossary, Resources; Compare hub + Excel comparison; 3 buyer-intent landers; Guides hub + 10 guides; Privacy, Terms |
 | SEO pass | **Done** (11 Oct): generated sitemap and `llms.txt`, 1200x630 OG image, canonical/meta/schema checks, heading order, orphan and anchor checks. Run `node scripts/seo-audit.cjs` after adding pages |
 | Not built | Named competitor comparisons (need evidence sheets); P3 regional and scheme guides (need sourced research). P1e cutover rehearsal skipped by owner |
-| Pending owner input | Google Form URL (`site.demoFormUrl`), GA4 ID, legal text review by counsel, owner review of all copy, Cloudflare Pages cutover |
+| Pending owner input | Google Form URL (`site.demoFormUrl`, see `google-form-setup.md`), legal text review by counsel, owner review of all copy, Cloudflare Pages cutover |
 
 **Run it:** `cd website-static`, then `node ./node_modules/@11ty/eleventy/cmd.cjs --serve` (or `npm run dev` where node is on PATH). Verify with `node scripts/verify.cjs`.
 
 **Next action:** owner reviews all pages, supplies Form URL and GA4 ID. Then: visual pass on mobile for the newer pages, `seo-bulk` pass (alt, schema, sitemap, llms.txt), curated guides, evidence-based named comparisons, cutover. After every page run `scripts/verify.cjs` and a browser check after every page. `verify.cjs` also fails any page containing negative phrasing ("not a", "we don't"), competitor names, stack names or "coming soon".
 
-**Analytics:** Microsoft Clarity is wired in `layouts/base.njk` via `site.clarityId` (`yw0wg6sifl`), loaded on window load. The privacy page (`/legal/privacy/`) must disclose Clarity session analytics and cookies. GA4 still pending.
+**Analytics:** Microsoft Clarity is wired in `layouts/base.njk` via `site.clarityId` (`yw0wg6sifl`), loaded on window load. The privacy page (`/legal/privacy/`) must disclose Clarity session analytics and cookies. GA4 (`G-KZ63LNXQ6J`) is wired the same way via `site.gaId`, deferred on load.
 
-**Open owner items (defaults applied meanwhile):** (resolved: old `/guides/*` dropped, never indexed, no redirects); exact WhatsApp/bot scope wording; Google Form URL and GA4 ID; which named competitor comparisons to research first.
+**Deploy:** see `cloudflare-deploy-guide.md` (same Worker, new `wrangler.jsonc`, `.node-version`, `_redirects`, 404). Full URL list: `urls.md`.`n`n**Open owner items (defaults applied meanwhile):** (resolved: old `/guides/*` dropped, never indexed, no redirects); exact WhatsApp/bot scope wording; Google Form URL and GA4 ID; which named competitor comparisons to research first.
 
 ## Verified product facts (use these; do not re-guess)
 

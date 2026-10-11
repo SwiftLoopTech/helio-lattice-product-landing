@@ -6,7 +6,7 @@
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="robots" content="{{ robots or "index, follow, max-image-preview:large" }}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:locale" content="en_IN">
@@ -36,8 +36,20 @@
     });
   </script>
   {% endif %}
-  <!-- TODO: GA4 — add deferred gtag snippet here once the measurement ID is supplied -->
-</head>
+  {% if site.gaId %}
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "{{ site.gaId }}");
+    window.addEventListener("load", function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id={{ site.gaId }}";
+      document.head.appendChild(s);
+    });
+  </script>
+  {% endif %}</head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   {% include "partials/header.njk" %}

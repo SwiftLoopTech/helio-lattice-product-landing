@@ -1,4 +1,0 @@
-# Cloudflare Pages — set "Root directory" to website-static in the dashboard.
-name = "heliolattice-marketing"
-pages_build_output_dir = "dist"
-compatibility_date = "2026-01-01"

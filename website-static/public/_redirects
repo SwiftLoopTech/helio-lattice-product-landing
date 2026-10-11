@@ -1,7 +1,16 @@
-# Cloudflare Pages redirects.
-# Every path that exists on the previous site (product modules, solutions, pricing,
-# security, about, contact, demo, customers, resources, integrations, compare, legal)
-# is preserved with the same slug, so no rules are needed for URL continuity.
-# Pages serves /about/index.html at /about/ and redirects /about to /about/ itself.
+﻿# Redirects (Cloudflare Workers static assets / Pages syntax).
+#
+# html_handling is auto-trailing-slash, so /about redirects to /about/ with a 307.
+# Search engines already know the URLs below without a trailing slash, so give them a
+# permanent 301 to the canonical form. Every other path used in the previous site keeps
+# the same slug, so nothing else is needed for continuity.
+#
 # The old generated /guides/* cluster was never indexed and is intentionally not redirected.
 # Add retired-URL rules below as: /old-path /new-path/ 301
+/about /about/ 301
+/pricing /pricing/ 301
+/security /security/ 301
+/product/finance /product/finance/ 301
+/solutions/residential /solutions/residential/ 301
+/solutions/channel /solutions/channel/ 301
+/legal/privacy /legal/privacy/ 301
