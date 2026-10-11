@@ -8,7 +8,6 @@ eleventyExcludeFromCollections: true
 {%- if item.url and item.url != "/sitemap.xml" and not item.data.noindex %}
   <url>
     <loc>{{ site.url }}{{ item.url }}</loc>
-    <lastmod>{{ item.date | dateISO }}</lastmod>
   </url>
 {%- endif %}
 {%- endfor %}

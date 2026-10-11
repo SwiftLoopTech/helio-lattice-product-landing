@@ -1,0 +1,37 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# HelioLattice
+
+> HelioLattice is an ERP and CRM for rooftop solar installers and EPC companies in India. It runs every job from first enquiry through survey, quotation, delivery, materials, payments, final payment, AMC and service on one shared record, with roles and permissions for every desk and a partner portal for channel partners.
+
+Contact: support@heliolattice.com. Pricing is one yearly plan with every module plus a one-time implementation fee, quoted in writing after a demo.
+
+## Product
+{% for item in collections.all %}{% if item.url.startsWith("/product/") %}
+- [{{ item.data.title | safe }}]({{ site.url }}{{ item.url }}): {{ item.data.description | safe }}{% endif %}{% endfor %}
+
+## Solutions
+{% for item in collections.all %}{% if item.url.startsWith("/solutions/") %}
+- [{{ item.data.title | safe }}]({{ site.url }}{{ item.url }}): {{ item.data.description | safe }}{% endif %}{% endfor %}
+
+## Problems solved
+{% for item in collections.all %}{% if item.url.startsWith("/problems/") %}
+- [{{ item.data.title | safe }}]({{ site.url }}{{ item.url }}): {{ item.data.description | safe }}{% endif %}{% endfor %}
+
+## Roles
+{% for item in collections.all %}{% if item.url.startsWith("/roles/") %}
+- [{{ item.data.title | safe }}]({{ site.url }}{{ item.url }}): {{ item.data.description | safe }}{% endif %}{% endfor %}
+
+## Integrations
+{% for item in collections.all %}{% if item.url.startsWith("/integrations/") %}
+- [{{ item.data.title | safe }}]({{ site.url }}{{ item.url }}): {{ item.data.description | safe }}{% endif %}{% endfor %}
+
+## Compare and buyer guides
+{% for item in collections.all %}{% if item.url.startsWith("/compare/") or item.url.startsWith("/solar-") %}
+- [{{ item.data.title | safe }}]({{ site.url }}{{ item.url }}): {{ item.data.description | safe }}{% endif %}{% endfor %}
+
+## Company, help and policies
+{% for item in collections.all %}{% if item.url == "/pricing/" or item.url == "/security/" or item.url == "/about/" or item.url == "/customers/" or item.url == "/contact/" or item.url == "/demo/" or item.url == "/faq/" or item.url == "/glossary/" or item.url == "/resources/" or item.url.startsWith("/legal/") %}
+- [{{ item.data.title | safe }}]({{ site.url }}{{ item.url }}): {{ item.data.description | safe }}{% endif %}{% endfor %}

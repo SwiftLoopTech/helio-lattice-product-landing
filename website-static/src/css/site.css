@@ -1458,7 +1458,7 @@ a.tile:hover {
   margin-top: var(--s4);
   max-width: 22rem;
 }
-.site-footer h4 {
+.site-footer h3 {
   font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 600;

@@ -1,7 +1,0 @@
-# HelioLattice
-
-HelioLattice is operations software for rooftop solar installers and EPC companies in India. It connects enquiries, site survey, quotation, install checklists, material stock, collections, partner leads, and management reports on one job record.
-
-- Product: https://heliolattice.com/product/
-- Book a demo: https://heliolattice.com/demo/
-- Contact: support@heliolattice.com

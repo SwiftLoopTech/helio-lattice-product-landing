@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects.
+# Every path that exists on the previous site (product modules, solutions, pricing,
+# security, about, contact, demo, customers, resources, integrations, compare, legal)
+# is preserved with the same slug, so no rules are needed for URL continuity.
+# Pages serves /about/index.html at /about/ and redirects /about to /about/ itself.
+# The old generated /guides/* cluster was never indexed and is intentionally not redirected.
+# Add retired-URL rules below as: /old-path /new-path/ 301

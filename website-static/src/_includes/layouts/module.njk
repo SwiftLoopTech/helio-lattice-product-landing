@@ -99,7 +99,7 @@ layout: layouts/base.njk
 {% endif %}
 
 {% if steps %}
-<section class="section{% if not cards %} section--raised{% endif %} reveal" aria-labelledby="steps-h">
+<section class="section{% if not cards %} section--raised{% endif %} reveal" id="steps" aria-labelledby="steps-h">
   <div class="container">
     <div class="section__head">
       <p class="eyebrow">{{ steps.eyebrow }}</p>
@@ -137,7 +137,7 @@ layout: layouts/base.njk
 {% endif %}
 
 {% if table %}
-<section class="section section--raised reveal" aria-labelledby="table-h">
+<section class="section section--raised reveal" id="table" aria-labelledby="table-h">
   <div class="container">
     <div class="section__head">
       <p class="eyebrow">{{ table.eyebrow }}</p>
@@ -174,14 +174,14 @@ layout: layouts/base.njk
         <div class="ledger__row"><span><b>{{ r.b }}</b><small>{{ r.small }}</small></span><span class="pill{% if r.pill_state %} pill--{{ r.pill_state }}{% endif %}">{{ r.pill }}</span></div>
         {% endfor %}
       </div>
-      <p class="mock__caption">Example entries with illustrative data.</p>
+      <p class="mock__caption">{{ sp.caption | default("Example entries with illustrative data.") }}</p>
     </div>
   </div>
 </section>
 {% endfor %}
 
 {% if tiles %}
-<section class="section{% if splits | length % 2 == 0 %} section--raised{% endif %} reveal" aria-labelledby="tiles-h">
+<section class="section{% if splits | length % 2 == 0 %} section--raised{% endif %} reveal" id="tiles" aria-labelledby="tiles-h">
   <div class="container">
     <div class="section__head">
       <p class="eyebrow">{{ tiles.eyebrow }}</p>
@@ -209,7 +209,7 @@ layout: layouts/base.njk
 </section>
 {% endif %}
 
-<section class="section section--raised reveal" aria-labelledby="faq-h">
+<section class="section section--raised reveal" id="faq" aria-labelledby="faq-h">
   <div class="container">
     <div class="section__head">
       <p class="eyebrow">Questions</p>
