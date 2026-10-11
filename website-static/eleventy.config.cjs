@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });
 
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
+  eleventyConfig.addFilter("dateHuman", (d) => new Date(d).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }));
   eleventyConfig.addFilter("dateISO", (d) => new Date(d).toISOString().slice(0, 10));
 
   return {

@@ -1,0 +1,88 @@
+---
+layout: layouts/base.njk
+---
+{% set faqItems = faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "{{ site.url }}{{ page.url }}#article",
+  "mainEntityOfPage": "{{ site.url }}{{ page.url }}",
+  "headline": {{ h1 | dump | safe }},
+  "description": {{ description | dump | safe }},
+  "datePublished": "{{ published | dateISO }}",
+  "dateModified": "{{ modified | default(published) | dateISO }}",
+  "inLanguage": "en-IN",
+  "author": { "@type": "Organization", "name": "{{ site.name }}", "url": "{{ site.url }}/" },
+  "publisher": { "@type": "Organization", "name": "{{ site.name }}", "url": "{{ site.url }}/" },
+  "image": "{{ site.url }}{{ site.ogImage }}",
+  "isPartOf": { "@id": "{{ site.url }}/#website" }
+}
+</script>
+
+<div class="container">
+  {% include "partials/breadcrumb.njk" %}
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ eyebrow | default("Guide") }}</p>
+    <h1>{{ h1 }}</h1>
+    <p class="page-hero__lead">{{ lead }}</p>
+    <p class="definition"><strong>The short answer</strong> {{ answer }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container guide">
+    <aside class="guide__toc" aria-label="On this page">
+      <p class="guide__toc-title">On this page</p>
+      <ol>
+        {% for s in sections %}<li><a href="#s{{ loop.index }}">{{ s.h }}</a></li>{% endfor %}
+        <li><a href="#faq">Questions</a></li>
+      </ol>
+    </aside>
+    <article class="prose guide__body">
+      {% for s in sections %}
+      <h2 id="s{{ loop.index }}">{{ s.h }}</h2>
+      {% for para in s.p %}<p>{{ para }}</p>{% endfor %}
+      {% if s.list %}<{{ "ol" if s.ordered else "ul" }}>{% for li in s.list %}<li>{{ li }}</li>{% endfor %}</{{ "ol" if s.ordered else "ul" }}>{% endif %}
+      {% if s.after %}<p>{{ s.after }}</p>{% endif %}
+      {% endfor %}
+
+      {% if takeaways %}
+      <div class="guide__box">
+        <h2 id="takeaways">Keep this</h2>
+        <ul>{% for t in takeaways %}<li>{{ t }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+      <p class="guide__meta">Published {{ published | dateHuman }} by {{ site.name }}.{% if modified and modified != published %} Updated {{ modified | dateHuman }}.{% endif %}</p>
+    </article>
+  </div>
+</section>
+
+{% if related %}
+<section class="section section--raised reveal" aria-labelledby="rel-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Keep exploring</p>
+      <h2 id="rel-h">Related pages.</h2>
+    </div>
+    <div class="tiles">
+      {% for t in related %}<a class="tile" href="{{ t.href }}"><h3>{{ t.h }} &rarr;</h3><p>{{ t.p }}</p></a>{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section reveal" id="faq" aria-labelledby="faq-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-h">Common questions.</h2>
+    </div>
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}

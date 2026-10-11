@@ -99,8 +99,8 @@ Update site-blueprint.md for: [describe change]. No page code. Stop for approval
 | Step | Status |
 |------|--------|
 | Blueprint | Approved |
-| website-static scaffold | Partial — builder finishes on Home |
-| Home `/` | Not approved |
-| Product `/product/` | Not started |
-| Demo `/demo/` | Not started |
-| Cloudflare → `website-static/dist` | Configure when first deploy |
+| website-static (Eleventy) | Built: 64 pages, `verify.cjs` and `seo-audit.cjs` clean, no horizontal overflow at 390 px |
+| Pages | Home, Demo, Product + 9 modules + notifications, 4 solutions, Problems hub + 9, Roles hub + 7, Integrations hub + Tally + WhatsApp, Pricing, Customers, Security, About, Contact, FAQ, Glossary, Resources, Compare hub + Excel comparison, 3 buyer-intent landers, Guides hub + 10 guides, Privacy, Terms |
+| Mechanical SEO pass (section D) | Done: generated sitemap and llms.txt, robots, OG image, canonical/meta/schema, alt, headings, orphans, anchors |
+| P1e cutover rehearsal | Skipped by owner decision (11 Oct) |
+| Still open | Google Form URL, GA4 ID, legal review, named comparisons (evidence sheets), P3 regional/scheme guides (need sourced research), Cloudflare Pages production switch |
