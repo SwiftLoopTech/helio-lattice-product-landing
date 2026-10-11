@@ -1,0 +1,87 @@
+---
+layout: layouts/module.njk
+title: "Solar Inventory Software for Storekeepers | HelioLattice"
+description: "Keep the catalogue, receive stock, transfer between warehouses, issue to projects and record returns and losses. The store view of HelioLattice."
+crumbs:
+  - name: Roles
+    href: /roles/
+  - name: Storekeeper
+eyebrow: For the store
+h1: A store where every item has a place and a reason.
+lead: As storekeeper you are asked where things are, what is left and who took them. HelioLattice gives you a catalogue, warehouses, a movement ledger and project issues, so you can answer in seconds and prove it.
+heroSecondary:
+  href: "#features"
+  label: What the store sees
+definition:
+  q: What does the storekeeper get?
+  a: A material catalogue with brands and specifications, stock across several warehouses, a ledger of every receipt, transfer, issue, return and loss, reservations, low stock alerts and supplier purchase records.
+schemaName: HelioLattice for the store
+mock:
+  label: Example store view
+  title: Store
+  job: Main store
+  meta: Catalogue of 220 items
+  pill: 5 low stock
+  rows:
+    - { name: "Receive purchase", sub: "Into the main store", owner: "Store" }
+    - { name: "Transfer to vehicle", sub: "Paired movement recorded", owner: "Store" }
+    - { name: "Issue to project", sub: "Recorded against the job", owner: "Store" }
+    - { name: "Return from project", sub: "Added back to stock", owner: "Store", state: "idle" }
+  foot:
+    - "Reorder alerts"
+    - "Ledger for every item"
+steps:
+  eyebrow: A day in the store
+  h2: Receive, move, issue, return.
+  items:
+    - h: Receive
+      p: Record purchases and opening stock into a warehouse with cost, and capture serial numbers where you hold them.
+      path: ["Purchase", "Receipt", "Serial"]
+    - h: Move
+      p: Transfer between the main store, branches and vehicles with a paired record.
+      path: ["Out", "In", "Ledger"]
+    - h: Issue
+      p: Issue material to a project and keep a clear record of who received what.
+      path: ["Project", "Issue", "Record"]
+    - h: Reconcile
+      p: Record returns, damage and loss with reasons, and check availability against the reorder level.
+      path: ["Return", "Loss", "Alert"]
+features:
+  eyebrow: What the store sees
+  h2: Everything the store needs, in one place.
+  items:
+    - h: Catalogue
+      p: Seventeen product types, brands, specifications, units, GST and reorder levels.
+      li: ["Price history", "Vendor per item"]
+    - h: Warehouses
+      p: Main, branch, site, vehicle and temporary locations.
+      li: ["Transfers", "Stock by location"]
+    - h: Ledger
+      p: Ten movement types with quantity, cost and reference.
+      li: ["Filter by item or project", "Reasons recorded"]
+    - h: Availability
+      p: On-hand, reserved and available quantities for every item.
+      li: ["Reservations", "Low stock alerts"]
+    - h: Purchase records
+      p: Supplier quotes, purchase orders and tax invoices with GST by line.
+      li: ["Receive into stock", "Preferred vendor"]
+    - h: Access you control
+      p: Roles define who can issue, adjust or only view stock.
+      li: ["Stock accountant role", "Audit trail"]
+related:
+  - { h: Materials and stock, p: "The module in detail.", href: /product/materials/ }
+  - { h: Stock mismatch, p: "The problem it solves.", href: /problems/stock-mismatch/ }
+  - { h: Operations head view, p: "Who asks the store for material.", href: /roles/operations-head/ }
+faq:
+  - q: Can I see what is in each vehicle?
+    a: Yes. A vehicle can be a warehouse, so stock transferred to it is visible and its movements are recorded.
+  - q: Do returns get recorded?
+    a: Yes. Returns from a project are recorded as movements and added back to the warehouse.
+  - q: Will I know when stock is low?
+    a: Yes. Each item has a reorder level, and users see an alert when available stock reaches it.
+cta:
+  title: See your store as a ledger.
+  body: Bring your item list and a recent issue and we will record it in the demo.
+  secondaryHref: /product/materials/
+  secondaryLabel: "The materials module"
+---

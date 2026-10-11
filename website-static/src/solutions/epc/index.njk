@@ -1,0 +1,116 @@
+---
+layout: layouts/module.njk
+title: "Solar EPC and Commercial Project Software | HelioLattice"
+description: "Run commercial and larger solar projects with approved quotations, staged delivery, material control, project-wise money and service on one record."
+crumbs:
+  - name: Solutions
+    href: /solutions/residential/
+  - name: Commercial and EPC
+eyebrow: Commercial and EPC
+h1: Larger solar projects, with the discipline of an EPC office.
+lead: Commercial and industrial jobs run longer, cost more and involve more people. HelioLattice gives each project an approved quotation, a staged delivery plan, material issue, project-wise payments and expenses, and a service record that continues after commissioning.
+heroSecondary:
+  href: "#features"
+  label: See how it fits
+definition:
+  q: Who is this for?
+  a: EPC companies and installers whose work includes commercial, industrial and larger projects, with a project manager, an accounts team and a store, and a need to know the money and material on every project.
+featureList:
+  - Approved, revisioned quotations
+  - Staged delivery with named owners
+  - Material issue and returns by project
+  - Project-wise receipts and expenses
+  - Role-based access and costing control
+  - AMC and service after commissioning
+schemaName: Software for solar EPC and commercial projects
+mock:
+  label: Example commercial project
+  title: Project record
+  job: Commercial · 100 kW on-grid
+  meta: "Stage 6 of 13 · Project manager: Rahul"
+  pill: Material pending
+  rows:
+    - { name: "Quotation revision 3 approved", sub: "Costing visible to approvers", owner: "Sales head" }
+    - { name: "Advance received", sub: "Recorded against the project", owner: "Accounts" }
+    - { name: "Material issue", sub: "Structure issued, inverters pending", owner: "Store", state: "wait" }
+    - { name: "Installation and commissioning", sub: "Starts after material", owner: "Field team", state: "idle" }
+  foot:
+    - "Money and material on the same record"
+    - "Next owner: Store"
+steps:
+  eyebrow: How an EPC office runs on it
+  h2: One record from the tender to the third year.
+  intro: Larger projects fail on coordination, not on engineering. A shared record gives every desk the same facts.
+  items:
+    - h: Price and approve
+      p: Build the quotation from your catalogue, revise it as the scope changes, and require approval before it goes out.
+      path: ["Survey", "Quotation", "Approved"]
+    - h: Plan the delivery
+      p: Break the project into stages with documents, utility and subsidy steps and a named owner for each.
+      path: ["Stages", "Owners", "Documents"]
+    - h: Control material and money
+      p: Issue material from warehouses to the project, and record receipts, expenses and payment requests against it.
+      path: ["Issue", "Expenses", "Receipts"]
+    - h: Hand over and serve
+      p: Close the project, keep the documents, and continue with AMC and service on the same record.
+      path: ["Commission", "AMC", "Service"]
+features:
+  eyebrow: What matters for EPC
+  h2: Control without bureaucracy.
+  items:
+    - h: Costing control
+      p: Margins and internal costs are visible only to people with the permission, while sales and site teams see what they need.
+      li: ["Internal costing by permission", "Approval queue"]
+    - h: Stage ownership
+      p: Every stage is assigned to a person, with locks so the wrong person does not change a stage someone else owns.
+      li: ["Override for managers", "Progress and idle days"]
+    - h: Material by project
+      p: Stock held in several warehouses, issued to projects, returned if unused, with a ledger for every movement.
+      li: ["Reservations", "Damage and loss recorded"]
+    - h: Project-wise money
+      p: Receipts and expenses against each project, with proof, review, approval and a pending balance.
+      li: ["Separation of duties", "Export to Excel and Tally"]
+    - h: Reporting for owners
+      p: Project status, task operations, quotation pipeline and finance reports with role-based access.
+      li: ["Owner dashboard", "Personal work queue"]
+    - h: Service after handover
+      p: AMC billing, tickets and warranty replacements continue on the same customer record.
+      li: ["Service and warranty reports", "Vendor recovery recorded"]
+splits:
+  - eyebrow: Accountability
+    h2: Every project has a clear next owner.
+    p: A commercial project passes through survey, sales, projects, store, accounts and service. When each handover is recorded and each stage has an owner, the project manager spends time solving problems instead of finding who is responsible.
+    checks:
+      - Named owner on every stage
+      - Idle days and progress visible per project
+      - Permission-based access for each desk
+    ledgerHead: Who owns what on one project
+    ledger:
+      - { b: "Quotation", small: "Sales head", pill: "Approved" }
+      - { b: "Utility approval", small: "Project manager", pill: "In progress", pill_state: "wait" }
+      - { b: "Material issue", small: "Store", pill: "Waiting", pill_state: "idle" }
+      - { b: "Payment request", small: "Accounts", pill: "Pending approval", pill_state: "wait" }
+    link:
+      href: /product/access-control/
+      label: See roles and access
+related:
+  - { h: Survey and quotation, p: "Approved quotations with revisions.", href: /product/survey-quotation/ }
+  - { h: Materials and stock, p: "Material by project.", href: /product/materials/ }
+  - { h: Payments and expenses, p: "Project-wise money.", href: /product/finance/ }
+faq:
+  - q: Can we manage commercial projects with long timelines?
+    a: Yes. Stages, tasks, documents and owners are configurable, so a longer project is broken into the steps your team already uses.
+  - q: Can we keep margins away from site teams?
+    a: Yes. Internal costing is visible only to roles with the internal costing permission.
+  - q: Can we track money per project?
+    a: Yes. Receipts, expenses and payment requests are recorded against each project, with a pending balance and approval trail.
+  - q: Can our store issue material to each project?
+    a: Yes. Material is issued from warehouses to the project and returns are recorded, with a ledger of each movement.
+  - q: Do we get reports for the owner?
+    a: Yes. More than twenty reports and an owner dashboard cover pipeline, projects, money and partners, scoped by role.
+cta:
+  title: See a larger project run end to end.
+  body: Bring one commercial project and we will show its quotation, checklist, material and money together.
+  secondaryHref: /product/
+  secondaryLabel: See all modules
+---

@@ -1,0 +1,22 @@
+[
+  {
+    "q": "What does HelioLattice include?",
+    "a": "Nine connected modules: enquiries and pipeline, survey and quotation, delivery checklists, materials and stock, payments and expenses, AMC and service finance, reports, a partner portal, and roles with access control. One yearly plan covers all of them."
+  },
+  {
+    "q": "How do the modules work together?",
+    "a": "They share one customer and one job record. A won quotation becomes a project, the project draws stock from your warehouses, and the stock, receipts and expenses on that project appear in your reports, so nothing is typed in twice."
+  },
+  {
+    "q": "Can we define our own delivery stages?",
+    "a": "Yes. An administrator defines the stages, required documents and utility steps once. Every live job is then measured against that checklist, and each stage can be assigned to a named person."
+  },
+  {
+    "q": "Can our team use it from a phone?",
+    "a": "Yes. Surveyors capture roof, electrical and structural details and location-stamped photos on a phone, and field crews work an assigned list and upload evidence from site."
+  },
+  {
+    "q": "Can our accountant keep using the accounting package they already use?",
+    "a": "Yes. HelioLattice runs the operational money workflow next to the job and exports structured data to Excel, Tally XML and Tally JSON for your accountant."
+  }
+]

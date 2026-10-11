@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 215 215">
+  <title>HelioLattice favicon</title>
+  <rect x="10" y="10" width="190" height="193" rx="49" fill="#F8F2E6"/>
+  <path d="M33 60.5H61A46.5 46.5 0 0 1 107.5 107A46.5 46.5 0 0 1 61 153.5H33Z" fill="#F3A232"/>
+  <g stroke="#3A7877" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M61 29 L61 185"/>
+    <path d="M33 60.5 L177 60.5"/>
+    <path d="M33 91.5 L177 91.5"/>
+    <path d="M33 122.5 L177 122.5"/>
+    <path d="M33 153.5 L177 153.5"/>
+    <path d="M97 30 L183 116"/>
+    <path d="M56 30 L177 151"/>
+    <path d="M33 60 L160 183"/>
+    <path d="M56 123 L119 185"/>
+    <path d="M60 90 L120 30"/>
+    <path d="M33 160 L163 30"/>
+    <path d="M55 183 L178 60"/>
+    <path d="M98 184 L183 98"/>
+  </g>
+</svg>

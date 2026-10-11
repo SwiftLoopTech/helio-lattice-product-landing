@@ -1,0 +1,87 @@
+---
+layout: layouts/module.njk
+title: "Solar Project Management for Operations Heads | HelioLattice"
+description: "See every live job against its checklist, with named stage owners, idle days, document status and tasks. The operations head view of HelioLattice."
+crumbs:
+  - name: Roles
+    href: /roles/
+  - name: Operations head
+eyebrow: For the operations head
+h1: Know which job is waiting, and for whom.
+lead: As operations head you live between customers, utilities, crews and the office. HelioLattice puts every live job on your checklist, shows who owns each stage, how long it has been idle and which document is missing.
+heroSecondary:
+  href: "#features"
+  label: What operations sees
+definition:
+  q: What does the operations head get?
+  a: Every live job measured against your delivery checklist, with stage owners, progress, idle days, document verification, tasks and reminders, and the authority to step in on any stage.
+schemaName: HelioLattice for the operations head
+mock:
+  label: Example operations view
+  title: Jobs
+  job: Live jobs
+  meta: 38 in progress
+  pill: 6 idle three days or more
+  rows:
+    - { name: "Jobs by stage", sub: "Progress per job", owner: "Operations" }
+    - { name: "Waiting on documents", sub: "Pending and rejected", owner: "Documents", state: "wait" }
+    - { name: "Waiting on utility", sub: "Named owner on each", owner: "Project manager", state: "wait" }
+    - { name: "Ready for installation", sub: "Material issued", owner: "Field team", state: "idle" }
+  foot:
+    - "Override on any stage"
+    - "Idle days visible"
+steps:
+  eyebrow: A day as operations head
+  h2: Unblock, assign, verify, schedule.
+  items:
+    - h: Start with the idle list
+      p: See jobs idle for days at the top of your work queue, with the stage and owner holding each one.
+      path: ["Idle", "Stage", "Owner"]
+    - h: Reassign
+      p: Move a stage to someone else, or step in with an override permission.
+      path: ["Stage", "Reassign", "Override"]
+    - h: Verify documents
+      p: Mark documents verified or rejected and see what remains on each checklist.
+      path: ["Upload", "Verify", "Reject"]
+    - h: Schedule and review
+      p: Tasks, reminders and reports on project status and task operations close the day.
+      path: ["Tasks", "Reminders", "Reports"]
+features:
+  eyebrow: What operations sees
+  h2: A control tower for delivery.
+  items:
+    - h: Jobs by stage
+      p: All live jobs with progress, idle days and stage snapshots.
+      li: ["Filter by assignee", "Statuses on every job"]
+    - h: Stage ownership
+      p: Named owner on every stage, with a locked edit rule and manager override.
+      li: ["Locks by stage", "Override permission"]
+    - h: Documents
+      p: Upload, verify and reject documents with statuses on the checklist.
+      li: ["Pending, verified, rejected", "Generate from templates"]
+    - h: Tasks and reminders
+      p: Task boards with templates, priority and blocked status, plus reminders.
+      li: ["Personal and team templates", "Overdue counts"]
+    - h: Surveys and complaints
+      p: Survey completion and support complaint reports sit alongside project status.
+      li: ["Site surveys report", "Support complaints report"]
+    - h: Stage-level access
+      p: Control who can edit which stages and see which jobs.
+      li: ["Role scopes", "Audit trail"]
+related:
+  - { h: Delivery checklist, p: "The module in detail.", href: /product/delivery/ }
+  - { h: Materials and stock, p: "Material for the next job.", href: /product/materials/ }
+  - { h: Field team view, p: "What crews see.", href: /roles/field-team/ }
+faq:
+  - q: Can I step in on a stage someone else owns?
+    a: Yes, with the override permission that managers hold. Others see an owned stage read-only.
+  - q: Can I see how long a job has been idle?
+    a: Yes. Jobs show progress and idle days, and your work queue highlights jobs idle for several days.
+  - q: Can I assign work to the field team?
+    a: Yes. Stages and tasks are assigned to named people, and each person works from their own queue.
+cta:
+  title: See your live jobs on one checklist.
+  body: Bring your open jobs and we will place them on a delivery checklist with owners.
+  secondaryHref: /product/delivery/
+  secondaryLabel: "The delivery module"
+---

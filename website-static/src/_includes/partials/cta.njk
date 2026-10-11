@@ -1,0 +1,10 @@
+<section class="cta">
+  <div class="container">
+    <h2>{{ cta.title or "Bring a few of your real open jobs. We will walk through them on the screens." }}</h2>
+    <p>{{ cta.body or "A short demo covers enquiry, survey, quotation, delivery checklist, stock and pending payment on the kind of work your team does. We confirm your yearly plan and implementation fee in writing afterwards." }}</p>
+    <div class="cta__actions">
+      <a class="btn btn--primary btn--lg" href="/demo/">Book a demo</a>
+      <a class="btn btn--light btn--lg" href="{{ cta.secondaryHref or '/product/' }}">{{ cta.secondaryLabel or "See the product" }}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,87 @@
+---
+layout: layouts/module.njk
+title: "Solar Accounts Software for Accountants | HelioLattice"
+description: "Review claims with proof, record receipts, track payables, see pending balances per project and export to Excel and Tally. The accounts view of HelioLattice."
+crumbs:
+  - name: Roles
+    href: /roles/
+  - name: Accounts
+eyebrow: For accounts
+h1: Clean claims in, clean exports out.
+lead: Accounts spends the month chasing receipts, bills and approvals. HelioLattice collects claims with proof against the right project, moves them through review and approval, and exports them in the formats your accountant already uses.
+heroSecondary:
+  href: "#features"
+  label: What accounts sees
+definition:
+  q: What does the accounts team get?
+  a: A claims workflow with proof and separation of duties, receipts and payables per project, pending balances, bank statement matching, ageing reports and exports to Excel, Tally XML and Tally JSON.
+schemaName: HelioLattice for accounts
+mock:
+  label: Example accounts queue
+  title: Claims
+  job: To review
+  meta: Finance claims
+  pill: 9 to verify
+  rows:
+    - { name: "Submitted claims", sub: "With proof attached", owner: "Accounts" }
+    - { name: "Needs clarification", sub: "Sent back to the submitter", owner: "Submitter", state: "wait" }
+    - { name: "Approved, ready to post", sub: "Reviewed by someone else", owner: "Accounts" }
+    - { name: "Exported to Tally", sub: "History recorded", owner: "Accounts", state: "idle" }
+  foot:
+    - "Pending balance per project"
+    - "Ageing report available"
+steps:
+  eyebrow: A day in accounts
+  h2: Verify, post, reconcile, export.
+  items:
+    - h: Verify claims
+      p: Open each submitted claim with its proof, correct it or ask for clarification. You cannot verify your own claim.
+      path: ["Claim", "Proof", "Verify"]
+    - h: Post
+      p: Once approved, post the claim, and see rejected, withdrawn and reversed claims in the history.
+      path: ["Approved", "Posted", "History"]
+    - h: Match the bank
+      p: Import a bank statement CSV and match lines to receipts, vendor payments and entries.
+      path: ["Import", "Match", "Exclude"]
+    - h: Export
+      p: Export claims to Excel, Tally XML or Tally JSON for your accountant, with export history recorded.
+      path: ["Filter", "Export", "History"]
+features:
+  eyebrow: What accounts sees
+  h2: Tools that remove month-end panic.
+  items:
+    - h: Claim workflow
+      p: Six claim types, with submit, verify, approve and post as separate steps.
+      li: ["Event log per claim", "Attachment rules"]
+    - h: Receivables and payables
+      p: Customer invoices and receipts, and vendor bills and payment requests, with ledgers.
+      li: ["Credit notes", "Accounts ageing"]
+    - h: Project balances
+      p: Collected, pending and outstanding amounts shown per project.
+      li: ["Claims by status", "Per-job view"]
+    - h: Bank statement matching
+      p: Match statement lines to what was recorded, or mark them excluded.
+      li: ["Match and unmatch", "Controlled by a setting"]
+    - h: Stock valuation
+      p: Purchase, issue, return and loss events recorded for accounts.
+      li: ["Valuation by event", "Stock dimension report"]
+    - h: Export history
+      p: A record of every export, with Excel, Tally XML and Tally JSON options.
+      li: ["Role-based export permission", "Accounts export history report"]
+related:
+  - { h: Payments and expenses, p: "The module in detail.", href: /product/finance/ }
+  - { h: Pending collections, p: "The problem it solves.", href: /problems/pending-collections/ }
+  - { h: Owner view, p: "What the owner reads.", href: /roles/owner/ }
+faq:
+  - q: Can the accountant keep using Tally?
+    a: Yes. Claims export to Tally XML and Tally JSON, and to Excel, so the accountant continues in the package they already use.
+  - q: Who can approve claims?
+    a: People whose role holds the approval permission. Submit, verify, approve and post are separate permissions.
+  - q: Can we match bank statements?
+    a: Yes. Import a statement CSV and match lines to receipts, vendor payments and entries when the setting is enabled.
+cta:
+  title: See a claim go from proof to Tally.
+  body: Bring a few recent expenses and receipts and we will take them through the workflow.
+  secondaryHref: /product/finance/
+  secondaryLabel: "The payments module"
+---

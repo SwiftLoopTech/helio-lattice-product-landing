@@ -1,0 +1,137 @@
+---
+layout: layouts/module.njk
+title: "Solar Project Payments, Expenses and Tally Export | HelioLattice"
+description: "Record receipts and expenses against each solar project, route claims through review and approval, see pending balances, and export to Excel and Tally."
+crumbs:
+  - name: Product
+    href: /product/
+  - name: Payments and expenses
+eyebrow: Payments and expenses
+h1: Know what is collected, what is pending and what each job cost.
+lead: Record every receipt and expense against the project it belongs to, send claims through review and approval with proof attached, see the pending balance on each job, and hand your accountant clean exports.
+heroSecondary:
+  href: "#features"
+  label: See what it does
+definition:
+  q: What does this module do?
+  a: It runs the operational money workflow of a solar company next to the work. Receipts, expenses, payment requests and refunds are recorded with proof, reviewed, approved and posted, and each project shows what has been collected and what is still pending.
+featureList:
+  - Receipts, expenses, payment requests and refunds
+  - Review and approval with proof attachments
+  - Pending balance per project
+  - Receivables and payables
+  - Bank statement import and matching
+  - Export to Excel, Tally XML and Tally JSON
+schemaName: Solar project payments, expenses and accounting export
+mock:
+  label: Example money summary for one project
+  title: Project payments
+  job: Residential · 5 kW on-grid
+  meta: "Job 1042 · Customer: S. Nair"
+  pill: Balance pending
+  rows:
+    - { name: "Advance received", sub: "Receipt with proof, verified", owner: "Accounts" }
+    - { name: "Site expense claim", sub: "Transport and labour, approved", owner: "Accounts" }
+    - { name: "Payment request", sub: "Vendor, waiting for approval", owner: "Owner", state: "wait" }
+    - { name: "Final payment", sub: "Due after commissioning", owner: "Sales", state: "idle" }
+  foot:
+    - "Collected and pending shown per job"
+    - "Next owner: Owner"
+steps:
+  eyebrow: How it works
+  h2: Record, review, approve, post.
+  intro: Each claim moves through the same short path, and each step records who did it and when.
+  items:
+    - h: Record
+      p: A user raises a receipt, expense, reimbursement, payment request or refund against a project, with proof attached.
+      path: ["Claim", "Proof", "Submitted"]
+    - h: Review
+      p: A reviewer checks the claim, asks for clarification or verifies it. A person cannot verify their own claim.
+      path: ["Submitted", "Clarification", "Verified"]
+    - h: Approve and post
+      p: An approver signs it off and accounts post it. Rejected, withdrawn and reversed claims stay on the record.
+      path: ["Approved", "Posted", "Exported"]
+    - h: See the balance
+      p: The project shows the amount collected, the amount pending and the claims in each status.
+      path: ["Collected", "Pending", "By status"]
+features:
+  eyebrow: What it does
+  h2: Control over money without a finance degree.
+  items:
+    - h: Claims with proof
+      p: Six claim types cover income, expense, reimbursement, payment request, refund and adjustment, with files attached as evidence.
+      li: ["Attachment rules per category", "A full event log per claim"]
+    - h: Separation of duties
+      p: Submit, verify, approve and post are separate permissions, so the person who raises a claim is not the person who approves it.
+      li: ["Needs-clarification step", "Roles decide who can do what"]
+    - h: Pending balance per job
+      p: Every project shows collected and pending amounts, receivable and payable outstanding, and claims by status.
+      li: ["Visible to the right roles", "Linked to the project record"]
+    - h: Receivables and payables
+      p: Customer invoices, receipts and credit notes, and vendor bills and payment requests, are tracked with ledgers.
+      li: ["Customer and vendor accounts", "Ageing report included"]
+    - h: Bank statement import
+      p: Import a bank statement CSV and match each line to a receipt, a vendor payment or an entry, or mark it excluded.
+      li: ["Match and unmatch", "Controlled by a setting"]
+    - h: Exports for your accountant
+      p: Export claims to Excel, Tally XML or Tally JSON. Your accountant keeps working in the package they already use.
+      li: ["Excel, Tally XML and Tally JSON", "Export history is recorded"]
+splits:
+  - eyebrow: Approval
+    h2: Every rupee spent has a name, a reason and a proof.
+    p: Site expenses, vendor payments and refunds are where margins quietly leak. Routing them through review and approval gives the owner a record of who asked, who checked and who approved.
+    checks:
+      - Proof attached to the claim
+      - Reviewer and approver recorded
+      - Clarification requests kept on the claim
+      - Reversals leave an audit trail
+    ledgerHead: One expense claim
+    ledger:
+      - { b: "Submitted", small: "Site transport, with receipt", pill: "Submitted", pill_state: "idle" }
+      - { b: "Verified", small: "By accounts, not the submitter", pill: "Verified" }
+      - { b: "Approved", small: "By the owner", pill: "Approved" }
+      - { b: "Posted", small: "Exported to Tally", pill: "Posted" }
+  - eyebrow: Stock value
+    h2: Material cost reaches accounts as well.
+    p: Purchases, project issues, returns, damage and adjustments are recorded as stock valuation events for accounts, next to the costs on the project.
+    checks:
+      - Valuation events for purchase, issue, return and loss
+      - Reports by stock, service and warranty dimensions
+      - Costs and receipts on the same project
+    ledgerHead: Valuation events
+    ledger:
+      - { b: "Purchase", small: "Panels received", pill: "Recorded" }
+      - { b: "Project issue", small: "To job 1042", pill: "Recorded" }
+      - { b: "Damage or loss", small: "One panel written off", pill: "Recorded", pill_state: "wait" }
+    link:
+      href: /product/materials/
+      label: See materials and stock
+tiles:
+  eyebrow: Also included
+  h2: Money tools around the claim.
+  items:
+    - { h: Reports, p: "Finance claims, accounts ageing and export history." }
+    - { h: Advance on enquiry, p: "Record an advance when a job is won." }
+    - { h: Permissions, p: "Separate rights to view, verify, approve and export." }
+    - { h: Service money, p: "AMC and service entries on the same system." }
+related:
+  - { h: Service and AMC, p: "Money after the job is done.", href: /product/service-amc/ }
+  - { h: Reports, p: "Collections and pending money for owners.", href: /product/reporting/ }
+  - { h: Problems we solve, p: "Pending collections nobody tracks.", href: /problems/pending-collections/ }
+faq:
+  - q: How does it work with our accounting software?
+    a: It sits beside it. HelioLattice runs the operational money workflow next to the job and exports claims to Excel, Tally XML and Tally JSON, so your accountant continues in the package they already use.
+  - q: Can we see the pending amount on each project?
+    a: Yes. Each project shows collected and pending amounts, outstanding receivable and payable, and its claims by status.
+  - q: Who can approve an expense?
+    a: People whose role holds the approval permission. Submit, verify, approve and post are separate permissions, and a user cannot verify their own claim.
+  - q: Can we attach proof to a claim?
+    a: Yes. Files are attached to the claim, and categories can require an attachment before submission.
+  - q: Can we match bank statements?
+    a: Yes. Import a bank statement CSV and match each line to a receipt, vendor payment or entry when the bank matching setting is on for your company.
+cta:
+  title: See collections and costs on your own jobs.
+  body: Bring a recent job with an advance, a few expenses and a balance to collect, and we will show it from claim to export.
+  secondaryHref: /product/service-amc/
+  secondaryLabel: "Next: AMC and service"
+---

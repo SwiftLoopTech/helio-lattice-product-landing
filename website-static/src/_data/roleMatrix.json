@@ -1,0 +1,12 @@
+{
+  "roles": ["Sales executive", "Site engineer", "Accountant", "Auditor"],
+  "rows": [
+    { "label": "See assigned leads",         "cells": ["full", "off",  "off",  "off"] },
+    { "label": "Build and send a quotation", "cells": ["full", "off",  "off",  "off"] },
+    { "label": "Complete a site survey",     "cells": ["part", "full", "off",  "off"] },
+    { "label": "Submit an expense claim",    "cells": ["full", "full", "full", "off"] },
+    { "label": "Approve or reject claims",   "cells": ["off",  "off",  "full", "off"] },
+    { "label": "Read the ledger",            "cells": ["off",  "off",  "full", "full"] },
+    { "label": "Read the audit trail",       "cells": ["off",  "off",  "off",  "full"] }
+  ]
+}

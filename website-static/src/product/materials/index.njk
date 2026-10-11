@@ -1,0 +1,125 @@
+---
+layout: layouts/module.njk
+title: "Solar Inventory and Stock Management Software | HelioLattice"
+description: "Material catalogue, brands, price history, multiple warehouses and a full stock ledger with issue and return to each solar project."
+crumbs:
+  - name: Product
+    href: /product/
+  - name: Materials and stock
+eyebrow: Materials and stock
+h1: Know what you hold, where it is, and which project took it.
+lead: One material catalogue feeds your quotations and your store. Keep stock across main stores, branches, vehicles and sites, move it with transfers, issue it to projects, take returns, and read every movement in a ledger.
+heroSecondary:
+  href: "#features"
+  label: See what it does
+definition:
+  q: What does the materials module do?
+  a: It keeps your catalogue of panels, inverters, structures and cables with brands, specifications and price history, tracks stock in several warehouses, and records every receipt, transfer, issue and return in a movement ledger.
+featureList:
+  - Material catalogue with brands and specifications
+  - Purchase, quotation and selling price history
+  - Multiple warehouses and stock transfers
+  - Issue to and return from projects
+  - Stock ledger with ten movement types
+  - Low stock alerts
+schemaName: Solar inventory and stock management
+mock:
+  label: Example stock position for one material
+  title: Stock
+  job: 540 Wp mono panel
+  meta: Main store 120 · Branch 40 · Vehicle 12
+  pill: Reserved 30
+  rows:
+    - { name: "Purchase receipt", sub: "Main store, 200 units", owner: "Store" }
+    - { name: "Transfer to branch", sub: "40 units moved", owner: "Store" }
+    - { name: "Issued to project 1042", sub: "12 units to the vehicle for dispatch", owner: "Store" }
+    - { name: "Reserved for next job", sub: "30 units held", owner: "Sales", state: "wait" }
+  foot:
+    - "Available after reservations shown"
+    - "Low stock alert on reorder level"
+steps:
+  eyebrow: How it works
+  h2: From catalogue to ledger.
+  intro: Every number the store reports comes from a recorded movement, so stock can be explained, not just counted.
+  items:
+    - h: Build the catalogue
+      p: Add items with category, brand, specifications, unit, GST rate and reorder level. Vendors can be linked to the materials they supply.
+      path: ["Category", "Brand", "Specification"]
+    - h: Receive stock
+      p: Record purchases and opening stock into a warehouse, with the cost of each lot.
+      path: ["Purchase", "Receipt", "Warehouse"]
+    - h: Move and issue
+      p: Transfer between warehouses, issue to a project, take returns, and write off damage or loss with a reason.
+      path: ["Transfer", "Issue", "Return"]
+    - h: Read the ledger
+      p: Each movement shows type, quantity, cost and reference, so any difference between the books and the shelf has a trail.
+      path: ["Movement", "Reference", "Balance"]
+features:
+  eyebrow: What it does
+  h2: A store that matches the site.
+  items:
+    - h: One catalogue for quote and store
+      p: Quotations are priced from the same catalogue the store issues from, so item names, specifications and rates stay consistent.
+      li: ["Seventeen product types", "Specifications stored with each item"]
+    - h: Price history
+      p: Keep purchase, quotation and selling prices over time, and promote a purchase price into your quotation price when you decide to.
+      li: ["Three price types", "A record of every change"]
+    - h: Multiple warehouses
+      p: Hold stock in a main store, branches, sites, vehicles or temporary locations, and transfer between them with a paired record.
+      li: ["Five warehouse types", "Paired transfer in and out"]
+    - h: Stock ledger
+      p: Ten movement types cover opening stock, purchase receipt, transfers, project issue and return, reservation, adjustment and damage or loss.
+      li: ["Every movement has a reason or reference", "Filter by material, warehouse or project"]
+    - h: Availability and alerts
+      p: See on-hand, reserved and available quantity for every item. A low stock alert appears when available stock falls to the reorder level.
+      li: ["Reservations reduce availability", "In-app low stock notification"]
+    - h: Suppliers and purchase records
+      p: Record supplier quotes, purchase orders and tax invoices with GST by line, and receive the stock into a warehouse.
+      li: ["Supplier and preferred vendor per item", "Serial numbers captured on receipt"]
+splits:
+  - eyebrow: On every project
+    h2: Issue material to the job it belongs to.
+    p: Material issued to a project and material returned from it are recorded against that project, so the cost and quantity that went into a job are visible and a returned item goes back to the shelf.
+    checks:
+      - Issue to a project from a chosen warehouse
+      - Returns recorded and added back to stock
+      - Damage and loss recorded with a reason
+      - Reserve stock for a job before it is issued
+    ledgerHead: Movements for one project
+    ledger:
+      - { b: "Project issue", small: "Panels, main store", pill: "Issued" }
+      - { b: "Project issue", small: "Inverter, main store", pill: "Issued" }
+      - { b: "Project return", small: "Two unused cable drums", pill: "Returned", pill_state: "idle" }
+      - { b: "Damage or loss", small: "One panel, reason recorded", pill: "Written off", pill_state: "wait" }
+    link:
+      href: /product/finance/
+      label: See how costs reach accounts
+tiles:
+  eyebrow: Also included
+  h2: Detail the store needs.
+  items:
+    - { h: Brands and categories, p: "Organise the catalogue the way you buy." }
+    - { h: Taxes by item, p: "GST rate and tax class on each material." }
+    - { h: Stock valuation events, p: "Purchase, issue, return and loss recorded for accounts." }
+    - { h: BOM rules, p: "Rules that set quantities when a quotation is built." }
+related:
+  - { h: Survey and quotation, p: "Quotations priced from this catalogue.", href: /product/survey-quotation/ }
+  - { h: Payments and expenses, p: "Costs and valuation on the same job.", href: /product/finance/ }
+  - { h: Problems we solve, p: "Stock that does not match what is on site.", href: /problems/stock-mismatch/ }
+faq:
+  - q: Can we keep stock in more than one place?
+    a: Yes. Create warehouses for the main store, branches, sites and vehicles, and transfer stock between them. Each transfer is recorded as a movement out and a movement in.
+  - q: How is material issued to a project?
+    a: The store issues a quantity from a chosen warehouse to a project. The movement is recorded in the ledger with the project reference, and returns are recorded the same way.
+  - q: Do we get a low stock alert?
+    a: Yes. Each item has a reorder level, and users see a low stock alert when available quantity falls to that level. Reserved stock is excluded from availability.
+  - q: Is the quotation linked to the catalogue?
+    a: Yes. The quotation bill of materials is built from the same catalogue using quantity rules per item, so prices and item names match what the store holds.
+  - q: Can we record supplier purchases?
+    a: Yes. Supplier quotes, purchase orders and tax invoices can be recorded with GST by line, and received stock goes into the chosen warehouse.
+cta:
+  title: See your stock explained, movement by movement.
+  body: Bring your current item list and we will show how it looks in the catalogue and the ledger.
+  secondaryHref: /product/finance/
+  secondaryLabel: "Next: payments and expenses"
+---

@@ -1,0 +1,77 @@
+---
+layout: layouts/module.njk
+title: "Solar Team Accountability and Access Control | HelioLattice"
+description: "When nobody owns the next step and everyone sees everything, solar jobs drift. Named stage owners, roles and work queues make accountability the default."
+crumbs:
+  - name: Problems we solve
+    href: /problems/
+  - name: Staff accountability
+eyebrow: Problems we solve · Team
+h1: Make it obvious who owns the next step, and who may see what.
+lead: A job passes through sales, survey, projects, store and accounts. At every handover someone assumes the next person knows. Meanwhile everyone can see margins and everyone can change anything. Accountability fails when ownership is vague and access is either too tight or too loose.
+heroSecondary:
+  href: "#signs"
+  label: See the signs
+definition:
+  q: What is staff accountability in a solar business?
+  a: Every stage of every job has one named owner, every person sees the work that is theirs, and sensitive data such as margins is limited to the right roles. Responsibility is visible rather than assumed.
+schemaName: Solar team accountability
+signs:
+  eyebrow: Signs you have it
+  h2: How accountability breaks down.
+  items:
+    - { h: Handover gaps, p: "A job waits because each side thinks the other has it." }
+    - { h: Margin exposure, p: "Costs visible to people who should not see them." }
+    - { h: Edits nobody can trace, p: "Records changed with no way to see who did it." }
+    - { h: Owner firefighting, p: "The owner is the only person who sees the whole picture." }
+steps:
+  eyebrow: How HelioLattice fixes it
+  h2: Owners, roles, queues and a log.
+  items:
+    - h: Name an owner for each stage
+      p: Stages on the delivery checklist are assigned to people, and only that person or a manager can change them.
+      path: ["Stage", "Assignee", "Override"]
+    - h: Give each desk a role
+      p: Roles set what a person can see and do, across modules, reports and the work queue.
+      path: ["Role", "Permissions", "Scope"]
+    - h: Show each person their queue
+      p: A personal work queue lists open jobs, idle days and due tasks and follow-ups.
+      path: ["Jobs", "Tasks", "Follow-ups"]
+    - h: Keep a record
+      p: An audit log and a user and role activity report show who did what.
+      path: ["Action", "Log", "Report"]
+features:
+  eyebrow: What changes
+  h2: Clarity that scales.
+  items:
+    - h: Roles that match your desks
+      p: Build roles for sales, survey, projects, store and accounts, and adjust the starter roles provided.
+      li: ["Matrix per role", "Multiple roles per user"]
+    - h: Data scopes
+      p: Limit people to records assigned to them, open managers to their team, and give owners everything.
+      li: ["Assigned", "Managed"]
+    - h: Margin protection
+      p: Internal costing is visible only to roles with the permission.
+      li: ["Approval queue", "Self-verification blocked"]
+    - h: Audit trail
+      p: Administrators search the audit log and read activity by user and role.
+      li: ["Audit log", "User and role activity report"]
+related:
+  - { h: Roles and access, p: "The module behind this fix.", href: /product/access-control/ }
+  - { h: Delivery checklist, p: "Stage owners and locks.", href: /product/delivery/ }
+  - { h: Reports, p: "Work queue and activity reports.", href: /product/reporting/ }
+faq:
+  - q: How do we make ownership clear on a job?
+    a: Assign each stage of the delivery checklist to a named person. They work the stage, and everyone can see who owns it.
+  - q: Can new staff see only what they need?
+    a: Yes. Roles and data scopes limit people to the screens and records their job requires.
+  - q: Can we see who changed a record?
+    a: Administrators can search an audit log, and a user and role activity report shows actions across the company.
+  - q: Can the owner see everything?
+    a: Yes. An owner role with the widest scope and report access sees the whole business.
+cta:
+  title: Map your desks into roles and owners.
+  body: Bring your team list and we will show roles, scopes and stage owners.
+  secondaryHref: /product/access-control/
+  secondaryLabel: "Roles and access"
+---

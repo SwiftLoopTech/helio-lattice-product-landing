@@ -1,0 +1,253 @@
+---
+layout: layouts/base.njk
+title: "HelioLattice — Solar ERP for installers and EPC companies"
+description: "Solar ERP for installers and EPCs in India: enquiries, partners, survey, quotation, delivery, stock, collections, AMC and service on one record."
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "{{ site.name }}",
+      "url": "{{ site.url }}/",
+      "logo": "{{ site.url }}/brand/HelioLattice_favicon_512.png",
+      "email": "{{ site.email }}"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "{{ site.name }}",
+      "publisher": { "@id": "{{ site.url }}/#organization" },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "{{ site.name }}",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": {{ homeFaq[0].a | dump | safe }},
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for item in homeFaq %}{
+          "@type": "Question",
+          "name": {{ item.q | dump | safe }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump | safe }} }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>
+
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <p class="eyebrow">Operations software for solar installers and EPCs</p>
+      <h1>One record from first enquiry, through final payment, to AMC and service.</h1>
+      <p class="hero__lead">HelioLattice runs your enquiries, channel partners, site surveys, quotations, delivery checklists, material stock, collections, AMC and service on one customer record, with the right screens and permissions for every team in your company.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary btn--lg" href="/demo/">Book a demo</a>
+        <a class="btn btn--outline btn--lg" href="/product/">See the product</a>
+      </div>
+      <p class="definition"><strong>What is HelioLattice?</strong> Operations software for solar installation and EPC companies. It keeps every job's survey, quotation, paperwork, material, money and service history together, and tells you who owns the next step.</p>
+    </div>
+
+    <div>
+      <figure class="mock" style="margin:0" aria-label="Example job record showing delivery stages and owners">
+        <div class="mock__bar"><span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__title">Job record</span></div>
+        <div class="mock__head">
+          <div>
+            <div class="mock__job">Residential · 5 kW on-grid</div>
+            <div class="mock__meta">Job 1042 · Survey by Anil · Sales: Meera</div>
+          </div>
+          <span class="pill pill--wait">Waiting on DISCOM papers</span>
+        </div>
+        <ol class="stages">
+          <li class="stage"><span class="stage__mark"></span><div><div class="stage__name">Site survey</div><div class="stage__sub">Roof, load and photos captured on phone</div></div><span class="stage__owner">Surveyor</span></li>
+          <li class="stage"><span class="stage__mark"></span><div><div class="stage__name">Quotation approved</div><div class="stage__sub">Revision 2 · priced from the catalogue</div></div><span class="stage__owner">Sales head</span></li>
+          <li class="stage"><span class="stage__mark"></span><div><div class="stage__name">Customer documents</div><div class="stage__sub">ID, bill and ownership proof verified</div></div><span class="stage__owner">Documents</span></li>
+          <li class="stage stage--wait"><span class="stage__mark"></span><div><div class="stage__name">DISCOM feasibility</div><div class="stage__sub">Waiting: sanctioned load letter</div></div><span class="stage__owner">Project manager</span></li>
+          <li class="stage stage--idle"><span class="stage__mark"></span><div><div class="stage__name">Material issue</div><div class="stage__sub">Panels, inverter, structure from stock</div></div><span class="stage__owner">Store</span></li>
+          <li class="stage stage--idle"><span class="stage__mark"></span><div><div class="stage__name">Installation and commissioning</div><div class="stage__sub">Checklist and photo evidence</div></div><span class="stage__owner">Field team</span></li>
+        </ol>
+        <div class="mock__foot"><span>Collected so far: advance received</span><span>Next owner: Project manager</span></div>
+      </figure>
+      <p class="mock__caption">Example job with illustrative data.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--raised reveal" aria-labelledby="proof-h">
+  <div class="container">
+    <h2 id="proof-h" class="eyebrow">Built for the whole company</h2>
+    <div class="proof" style="margin-top:1.5rem">
+      <div class="proof__item"><div class="proof__num">1</div><div class="proof__label">job record</div><div class="proof__sub">From enquiry to payment and service</div></div>
+      <div class="proof__item"><div class="proof__num">269</div><div class="proof__label">permission controls</div><div class="proof__sub">Across 26 areas of the product</div></div>
+      <div class="proof__item"><div class="proof__num">20+</div><div class="proof__label">operational reports</div><div class="proof__sub">Sales, jobs, money and partners</div></div>
+      <div class="proof__item"><div class="proof__num">3</div><div class="proof__label">data scopes</div><div class="proof__sub">All, assigned or managed by team</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="life-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">How a job moves</p>
+      <h2 id="life-h">Every step has a record and a named owner.</h2>
+      <p>A rooftop solar job runs for weeks and passes through many hands. HelioLattice keeps each step, its documents and the person responsible together, so the owner can see where a job is waiting without calling around.</p>
+    </div>
+    <ol class="lifecycle">
+      <li><h3>Enquiry</h3><p>Leads arrive by call, walk-in, import or channel partner, and are assigned with follow-ups and call logs.</p><span class="who">Sales</span></li>
+      <li><h3>Site survey</h3><p>Roof, electrical and structural details and location-stamped photos are captured on a phone.</p><span class="who">Surveyor</span></li>
+      <li><h3>Quotation</h3><p>A priced bill of materials is built from your catalogue, approved, revised and sent as a customer proposal.</p><span class="who">Sales and approver</span></li>
+      <li><h3>Documents</h3><p>Identity, ownership and bill documents are collected, uploaded to the job and verified.</p><span class="who">Document collector</span></li>
+      <li><h3>DISCOM and subsidy steps</h3><p>Your own checklist stages for utility and scheme paperwork, each assigned to a person.</p><span class="who">Project manager</span></li>
+      <li><h3>Material and delivery</h3><p>Stock is issued from the right warehouse to the project, and every movement is recorded in the stock ledger.</p><span class="who">Store</span></li>
+      <li><h3>Installation</h3><p>Field crews work an assigned list, update status and upload evidence from site.</p><span class="who">Field team</span></li>
+      <li><h3>Payment, AMC and service</h3><p>Receipts and balances run to final payment. Then AMC billing, service tickets, warranty replacement and vendor recovery continue against the same customer.</p><span class="who">Accounts and service</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--raised reveal" id="modules" aria-labelledby="mod-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">The platform</p>
+      <h2 id="mod-h">Nine connected modules on one customer and one job.</h2>
+      <p>Each module reads and writes the same records, so a quotation becomes a project, a project draws stock, and the stock and payments show up in your reports.</p>
+    </div>
+    <div class="modules">
+      <a class="module" href="/product/sales/"><span class="module__tag">Sales</span><h3>Enquiries and pipeline</h3><p>Solar-specific stages, bulk import, assignment, call logging, follow-ups and referral routes.</p><span class="module__more">Explore enquiries &rarr;</span></a>
+      <a class="module" href="/product/survey-quotation/"><span class="module__tag">Survey and quote</span><h3>Phone survey to proposal</h3><p>Structured surveys feed a quotation engine that prices from your catalogue, with approvals and revision history.</p><span class="module__more">Explore survey and quotation &rarr;</span></a>
+      <a class="module" href="/product/delivery/"><span class="module__tag">Delivery</span><h3>Your delivery checklist</h3><p>Define the stages, documents and utility steps once, then measure every live job against them.</p><span class="module__more">Explore delivery &rarr;</span></a>
+      <a class="module" href="/product/materials/"><span class="module__tag">Stock</span><h3>Materials and warehouses</h3><p>Catalogue, brands, price history, multiple locations and a full movement ledger tied to quoting and projects.</p><span class="module__more">Explore materials &rarr;</span></a>
+      <a class="module" href="/product/finance/"><span class="module__tag">Money</span><h3>Payments and expenses</h3><p>Receipts, expenses and payment requests with proof and approval, exportable to Excel and Tally.</p><span class="module__more">Explore payments &rarr;</span></a>
+      <a class="module" href="/product/service-amc/"><span class="module__tag">Service</span><h3>AMC and service finance</h3><p>AMC invoices and receipts, service costs, warranty replacements and vendor recovery on the same history.</p><span class="module__more">Explore service &rarr;</span></a>
+      <a class="module" href="/product/reporting/"><span class="module__tag">Reports</span><h3>Owner and manager reports</h3><p>More than twenty reports across leads, jobs, money and partners, plus a personal work queue for every user.</p><span class="module__more">Explore reports &rarr;</span></a>
+      <a class="module" href="/product/partners/"><span class="module__tag">Channel</span><h3>Partner portal</h3><p>Dealers and agents submit enquiries, track status and see commission through their own login.</p><span class="module__more">Explore partners &rarr;</span></a>
+      <a class="module" href="/product/access-control/"><span class="module__tag">Access</span><h3>Roles and permissions</h3><p>Build roles from 269 permissions, scope data by person or team, and keep an audit trail.</p><span class="module__more">Explore access control &rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band reveal" aria-labelledby="acc-h">
+  <div class="container band__grid">
+    <div class="band__copy">
+      <p class="eyebrow">Roles and access</p>
+      <h2 id="acc-h">Every team sees what it needs, and nothing it does not.</h2>
+      <p>A solar company has sales, survey, projects, store and accounts working on the same jobs. HelioLattice lets you give each person exactly the access their work requires, down to who can see internal costing or approve a quotation.</p>
+      <ul class="checks">
+        <li>269 permissions across 26 areas, combined into roles you control</li>
+        <li>Data scopes: everything, only what is assigned, or what a manager's team handles</li>
+        <li>Stage-level access on delivery workflows</li>
+        <li>Separate, independently authenticated login for channel partners</li>
+        <li>Audit trail of who changed what and when</li>
+      </ul>
+      <a class="btn btn--primary" href="/product/access-control/">See how access control works</a>
+    </div>
+    <div class="matrix">
+      <table>
+        <caption>Standard roles, side by side</caption>
+        <thead><tr><th scope="col">Capability</th>{% for r in roleMatrix.roles %}<th scope="col">{{ r }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for row in roleMatrix.rows %}
+          <tr><th scope="row">{{ row.label }}</th>{% for cell in row.cells %}<td>{% if cell == "full" %}<span class="dot" role="img" aria-label="Full access"></span>{% elif cell == "part" %}<span class="dot dot--half" role="img" aria-label="Limited access"></span>{% else %}<span class="dot dot--off" role="img" aria-label="No access"></span>{% endif %}</td>{% endfor %}</tr>
+          {% endfor %}
+        </tbody>      </table>
+      <div class="matrix__legend"><span class="dot"></span> Full &nbsp; <span class="dot dot--half"></span> Limited &nbsp; <span class="dot dot--off"></span> No access. Based on standard roles; every company defines its own.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="roles-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">By role</p>
+      <h2 id="roles-h">One system, a different view for each desk.</h2>
+    </div>
+    <div class="roles">
+      <div class="role"><h3>Owner and director</h3><p>See the pipeline, stuck jobs and pending money without asking five people.</p><ul><li>Open jobs by stage and owner</li><li>Collections and pending balances</li></ul></div>
+      <div class="role"><h3>Sales head</h3><p>Assign enquiries, watch ageing and approve quotations before they reach the customer.</p><ul><li>Bulk assignment and follow-ups</li><li>Quotation approval queue</li></ul></div>
+      <div class="role"><h3>Operations and projects</h3><p>Run each job's checklist, chase documents and utility steps, and see what is blocked.</p><ul><li>Stage assignment to named staff</li><li>Documents verified on the job</li></ul></div>
+      <div class="role"><h3>Store</h3><p>Keep the catalogue and stock current and issue material against the right project.</p><ul><li>Multiple warehouses and transfers</li><li>Issue and return to projects</li></ul></div>
+      <div class="role"><h3>Accounts</h3><p>Review claims, record receipts, track payables and export to the accounting package.</p><ul><li>Approval workflow with proof</li><li>Excel and Tally export</li></ul></div>
+      <div class="role"><h3>Channel partner</h3><p>Send enquiries and follow each one, with commission visible to the partner.</p><ul><li>Own login and portal</li><li>Status and commission tracking</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--raised reveal" aria-labelledby="money-h">
+  <div class="container split">
+    <div class="split__copy">
+      <p class="eyebrow">Money and service</p>
+      <h2 id="money-h">Collections, costs and service history on the job they belong to.</h2>
+      <p>Operational finance sits next to the work. Record what was collected and what is pending per project, route expenses and payment requests through approval, and keep AMC billing and warranty recovery attached to the customer and the project.</p>
+      <ul class="checks">
+        <li>Receipts, expenses and payment requests with proof and approval</li>
+        <li>Receivables and payables with ledgers</li>
+        <li>AMC invoices and receipts, service expenses, warranty replacement and vendor recovery</li>
+        <li>Structured export to Excel, Tally XML and Tally JSON</li>
+      </ul>
+    </div>
+    <div class="split__visual">
+      <div class="ledger" role="group" aria-label="Example service and finance entries">
+        <div class="ledger__head">Service and finance entries for one customer</div>
+        <div class="ledger__row"><span><b>AMC invoice</b><small>Linked to the customer and project</small></span><span class="pill">Issued</span></div>
+        <div class="ledger__row"><span><b>AMC receipt</b><small>Recorded against the invoice</small></span><span class="pill">Paid</span></div>
+        <div class="ledger__row"><span><b>Service expense</b><small>Recorded against the ticket reference</small></span><span class="pill pill--idle">Approved</span></div>
+        <div class="ledger__row"><span><b>Warranty replacement</b><small>Original and replacement product recorded</small></span><span class="pill pill--wait">Vendor recovery open</span></div>
+      </div>
+      <p class="mock__caption">Example entries with illustrative data.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="use-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">In daily use</p>
+      <h2 id="use-h">How a mid-size Indian EPC runs its day on HelioLattice.</h2>
+      <p>HelioLattice is in live use at a mid-size EPC company in India, replacing a mix of spreadsheets, chat groups and shared folders.</p>
+    </div>
+    <div class="usage">
+      <div class="usage__item"><h3>Status from one list</h3><p>The owner and sales head read the state of open jobs from reports and the work queue, not from phone rounds.</p></div>
+      <div class="usage__item"><h3>Material against the project</h3><p>The store issues stock to a project from the same catalogue the quotation was priced on, and returns are recorded too.</p></div>
+      <div class="usage__item"><h3>Partners on the same enquiries</h3><p>Channel partners follow their own enquiries and commission while the team works the same records.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--raised reveal" aria-labelledby="faq-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-h">Answers owners usually ask first.</h2>
+    </div>
+    <div class="faq">
+      {% for item in homeFaq %}
+      <details>
+        <summary>{{ item.q }}</summary>
+        <div class="faq__a">{{ item.a }}</div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Bring a few of your real open jobs. We will walk through them on the screens.</h2>
+    <p>A short demo covers enquiry, survey, quotation, delivery checklist, stock and pending payment on the kind of work your team does. We confirm your yearly plan and implementation fee in writing afterwards.</p>
+    <div class="cta__actions">
+      <a class="btn btn--primary btn--lg" href="/demo/">Book a demo</a>
+      <a class="btn btn--light btn--lg" href="/product/">See the product</a>
+    </div>
+  </div>
+</section>

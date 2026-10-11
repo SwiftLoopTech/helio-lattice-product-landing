@@ -1,0 +1,137 @@
+---
+layout: layouts/module.njk
+title: "Solar Quotation and Site Survey Software | HelioLattice"
+description: "Capture the site survey on a phone and turn it into a priced, approved solar quotation and customer proposal from your own material catalogue."
+crumbs:
+  - name: Product
+    href: /product/
+  - name: Survey and quotation
+eyebrow: Survey and quotation
+h1: From a phone survey to an approved solar proposal.
+lead: Your surveyor records roof, electrical and structural details with photos and location on a phone. The same record becomes a priced quotation built from your catalogue, approved by the right person, revised when needed, and sent as a customer proposal.
+heroSecondary:
+  href: "#features"
+  label: See what it does
+definition:
+  q: What does this module do?
+  a: It connects the site survey to the quotation. Survey data feeds a bill of materials priced from your own catalogue, the quote goes through an approval step, and the customer receives a proposal showing cost, subsidy, savings and payback.
+featureList:
+  - Phone-based site survey with location and photos
+  - Feasibility verdict on every survey
+  - Bill of materials generated from catalogue rules
+  - Quotation approval queue and revision history
+  - Internal costing hidden by permission
+  - Customer proposal PDF with savings and payback
+schemaName: Solar site survey and quotation software
+mock:
+  label: Example survey and quotation record
+  title: Quotation
+  job: Residential · 5 kW on-grid
+  meta: Revision 2 · Survey by Anil · Prepared by Meera
+  pill: Waiting for approval
+  rows:
+    - { name: "Site survey completed", sub: "Roof, electrical and structural details with photos", owner: "Surveyor" }
+    - { name: "Bill of materials generated", sub: "Priced from the catalogue, GST by line", owner: "Sales" }
+    - { name: "Submitted for approval", sub: "Margin visible only to approvers", owner: "Sales head", state: "wait" }
+    - { name: "Proposal sent to customer", sub: "Cost, subsidy, savings and payback", owner: "Sales", state: "idle" }
+  foot:
+    - "Net payable after subsidy shown"
+    - "Next owner: Sales head"
+steps:
+  eyebrow: How it works
+  h2: Survey, price, approve, send.
+  intro: One chain of records. Nothing is typed twice between the surveyor, the sales team and the approver.
+  items:
+    - h: Survey on site
+      p: A surveyor is assigned a booked visit and fills the survey on a phone. It captures location, roof, electrical and structural sections, up to nine photo categories, and a recommendation.
+      path: ["Booked", "On site", "Completed"]
+    - h: Feasibility verdict
+      p: Every completed survey carries a verdict of go, conditional go or no go with a reason, plus a suggested system size and project type.
+      path: ["Survey", "Verdict", "Recommended kW"]
+    - h: Priced quotation
+      p: A bill of materials is generated from rules on your catalogue, such as quantity per kW, panel count, string count and cable length, with GST on each line.
+      path: ["Catalogue", "BOM rules", "Priced lines"]
+    - h: Approve and send
+      p: The quotation is submitted, approved or rejected by a person with that permission, and only an approved quotation can be sent to the customer.
+      path: ["Draft", "Approval", "Sent"]
+features:
+  eyebrow: What it does
+  h2: Quotations your team can trust and your owner can control.
+  items:
+    - h: Survey sections for solar
+      p: Location, roof, electrical, structural, recommendation and customer interaction are captured as structured sections, and you can set up survey templates.
+      li: ["Photos in nine categories", "Location captured with the survey"]
+    - h: Catalogue-driven BOM
+      p: Rules on each catalogue item decide quantities, so a 5 kW quote and a 50 kW quote are built the same careful way.
+      li: ["Fixed, per kW, panel count, string and cable rules", "GST rate on every line"]
+    - h: Approval queue
+      p: Quotations wait in a queue for the people allowed to approve or reject them. A quote that is not approved cannot go out.
+      li: ["Submit, approve, reject", "Rejection reasons stay on the record"]
+    - h: Revisions with history
+      p: Change a price or a size and create a revision. Each version and the reason for it stay on the quotation timeline.
+      li: ["Version numbers per enquiry", "Events logged on the quotation"]
+    - h: Internal costing by permission
+      p: Margins and base costs show only to people with the internal costing permission. Everyone else sees the customer prices they need.
+      li: ["Cost and margin hidden by default", "Controlled by role"]
+    - h: Customer proposal
+      p: A proposal PDF presents project cost, subsidy, net payable, estimated generation, savings, payback and environmental impact, with your terms.
+      li: ["Subsidy and net payable", "Savings, payback and generation"]
+splits:
+  - eyebrow: Approval
+    h2: Nothing reaches the customer before the right person has seen it.
+    p: Price mistakes and unapproved discounts are expensive. Quotations pass through an approval step that records who approved, who rejected and why, and the customer sees only the approved version.
+    checks:
+      - Submit for approval from the draft
+      - Approvers see a dedicated queue
+      - Send is blocked until the quotation is approved
+      - Every revision keeps its own history
+    ledgerHead: Quotation timeline
+    ledger:
+      - { b: "Draft created", small: "From the completed survey", pill: "Draft", pill_state: "idle" }
+      - { b: "Submitted for approval", small: "By the sales executive", pill: "Pending", pill_state: "wait" }
+      - { b: "Approved", small: "By the sales head", pill: "Approved" }
+      - { b: "Sent to customer", small: "Proposal PDF shared", pill: "Sent" }
+  - eyebrow: Won quotation
+    h2: A yes from the customer starts the project.
+    p: When the customer accepts, the enquiry is marked won and converts into a customer and a project linked to the accepted quotation. Subsidy and bank-loan needs noted on the enquiry carry across.
+    checks:
+      - Accepted quotation links to the project
+      - Subsidy and bank-loan flags carry across
+      - Survey, calls and documents stay attached
+    ledgerHead: From quotation to project
+    ledger:
+      - { b: "Quotation accepted", small: "Customer says yes", pill: "Accepted" }
+      - { b: "Customer and project created", small: "Linked to the quotation", pill: "Created" }
+      - { b: "Delivery checklist starts", small: "Stages assigned to named owners", pill: "Active", pill_state: "wait" }
+    link:
+      href: /product/delivery/
+      label: See the delivery checklist
+tiles:
+  eyebrow: Also included
+  h2: Tools around the quotation.
+  items:
+    - { h: Quick quote, p: "A fast builder for simple jobs, as an optional add-on." }
+    - { h: Quotation lab, p: "Check equipment combinations before pricing." }
+    - { h: Project types, p: "On-grid, off-grid, hybrid and micro-inverter." }
+    - { h: Import, p: "Bring in an earlier proposal PDF as the first version." }
+related:
+  - { h: Enquiries and pipeline, p: "Where the survey and quotation begin.", href: /product/sales/ }
+  - { h: Materials and stock, p: "The catalogue the quotation is priced from.", href: /product/materials/ }
+  - { h: Roles and access, p: "Who can approve and who sees costing.", href: /product/access-control/ }
+faq:
+  - q: Can a surveyor use it on a phone?
+    a: Yes. The survey runs in a mobile browser. It captures the visit's location, roof, electrical and structural details and categorised photos, and the surveyor completes it on site.
+  - q: How is the bill of materials priced?
+    a: From your own material catalogue. Rules on each item set the quantity, for example per kW, per panel, per string or per metre of cable, and each line carries its GST rate.
+  - q: Who can see our margins?
+    a: Only people with the internal costing permission. Other users see the customer prices they need and nothing about base cost or margin.
+  - q: Can we revise a quotation after sending it?
+    a: Yes. A revision creates a new version with a reason, and the earlier versions stay on the record.
+  - q: What does the customer receive?
+    a: A proposal that shows project cost, subsidy, net payable, estimated generation, savings, payback years and environmental impact, along with your terms.
+cta:
+  title: See a survey become a proposal.
+  body: Bring one recent job and we will walk it from site survey to approved quotation.
+  secondaryHref: /product/delivery/
+  secondaryLabel: "Next: delivery checklist"
+---

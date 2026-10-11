@@ -1,0 +1,77 @@
+---
+layout: layouts/module.njk
+title: "Track Pending Solar Project Payments by Job | HelioLattice"
+description: "Not knowing what each solar customer has paid and what is pending locks up cash. See pending balances per project with approved expenses and receipts."
+crumbs:
+  - name: Problems we solve
+    href: /problems/
+  - name: Pending collections
+eyebrow: Problems we solve · Money
+h1: Know exactly what each solar customer still owes.
+lead: The advance came in, a second payment was promised after installation, and a third after net metering. Months later nobody is sure what is pending on which job. Cash that should be collected sits idle, and expenses go unapproved. Pending collections are a visibility problem before they are a finance problem.
+heroSecondary:
+  href: "#signs"
+  label: See the signs
+definition:
+  q: What are pending collections?
+  a: Money owed by customers on jobs already sold or delivered. They grow when receipts are tracked in a notebook or sheet instead of against the job, and when nobody is reminded to collect.
+schemaName: Solar pending collections and project payments
+signs:
+  eyebrow: Signs you have it
+  h2: How money goes missing.
+  items:
+    - { h: Balance unknown, p: "No quick answer to what a customer still owes." }
+    - { h: Receipts in notebooks, p: "Payments recorded outside the system." }
+    - { h: Expenses without proof, p: "Costs claimed with no bill and no approval." }
+    - { h: Late accounting, p: "The accountant reconstructs jobs at month end." }
+steps:
+  eyebrow: How HelioLattice fixes it
+  h2: Every rupee tied to a job.
+  items:
+    - h: Record against the project
+      p: Receipts, expenses and payment requests are raised against the project they belong to, with proof attached.
+      path: ["Receipt", "Expense", "Proof"]
+    - h: Review and approve
+      p: Claims are verified by someone other than the person who raised them, then approved and posted.
+      path: ["Verify", "Approve", "Post"]
+    - h: See the balance
+      p: Each project shows collected and pending amounts, with receivable and payable outstanding.
+      path: ["Collected", "Pending", "By status"]
+    - h: Hand off to accounts
+      p: Export claims to Excel, Tally XML or Tally JSON, and read ageing reports for what is overdue.
+      path: ["Export", "Tally", "Ageing"]
+features:
+  eyebrow: What changes
+  h2: Money you can see.
+  items:
+    - h: Pending balance per job
+      p: Open any project and see what has been collected and what remains.
+      li: ["Receivable outstanding", "Claims by status"]
+    - h: Approval with proof
+      p: Evidence on every claim, a reviewer and an approver recorded on each.
+      li: ["Self-verification blocked", "Clarification step"]
+    - h: Ageing reports
+      p: Accounts ageing and finance claims reports show what is overdue and where.
+      li: ["Owner and accountant views", "Role-based access"]
+    - h: Clean exports
+      p: Structured exports for your accountant in the formats they already use.
+      li: ["Excel", "Tally XML and JSON"]
+related:
+  - { h: Payments and expenses, p: "The module behind this fix.", href: /product/finance/ }
+  - { h: Reports, p: "Finance and ageing reports.", href: /product/reporting/ }
+  - { h: Service and AMC, p: "AMC receipts on the same system.", href: /product/service-amc/ }
+faq:
+  - q: Can we see the pending amount on every job?
+    a: Yes. Every project shows collected and pending amounts and its claims by status.
+  - q: How do we make sure expenses are real?
+    a: Claims carry attachments, are verified by a different person from the submitter, and approved before posting.
+  - q: Does it work with Tally?
+    a: HelioLattice exports claims to Tally XML and Tally JSON, and to Excel, so your accountant continues in the package they already use.
+  - q: Can the owner see who owes the most?
+    a: Accounts ageing and finance claims reports give owners and accountants a view of what is overdue.
+cta:
+  title: See what is pending on your open jobs.
+  body: Bring a few jobs with advances and balances and we will show their money position.
+  secondaryHref: /product/finance/
+  secondaryLabel: "The payments module"
+---

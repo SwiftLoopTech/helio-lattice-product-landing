@@ -1,0 +1,222 @@
+---
+layout: layouts/base.njk
+---
+{% set faqItems = faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "{{ site.url }}{{ page.url }}#webpage",
+  "url": "{{ site.url }}{{ page.url }}",
+  "name": {{ schemaName | default(h1) | dump | safe }},
+  "description": {{ description | dump | safe }},
+  "isPartOf": { "@id": "{{ site.url }}/#website" }
+  {%- if featureList %},
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "{{ site.name }}",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "featureList": {{ featureList | dump | safe }}
+  }
+  {%- endif %}
+}
+</script>
+
+<div class="container">
+  {% include "partials/breadcrumb.njk" %}
+</div>
+
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div>
+      <p class="eyebrow">{{ eyebrow }}</p>
+      <h1>{{ h1 }}</h1>
+      <p class="page-hero__lead">{{ lead }}</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary btn--lg" href="/demo/">Book a demo</a>
+        {% if heroSecondary %}<a class="btn btn--outline btn--lg" href="{{ heroSecondary.href }}">{{ heroSecondary.label }}</a>{% endif %}
+      </div>
+      {% if definition %}<p class="definition"><strong>{{ definition.q }}</strong> {{ definition.a }}</p>{% endif %}
+    </div>
+
+    {% if mock %}
+    <figure class="mock" style="margin:0" aria-label="{{ mock.label }}">
+      <div class="mock__bar"><span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__title">{{ mock.title }}</span></div>
+      <div class="mock__head">
+        <div>
+          <div class="mock__job">{{ mock.job }}</div>
+          <div class="mock__meta">{{ mock.meta }}</div>
+        </div>
+        {% if mock.pill %}<span class="pill pill--wait">{{ mock.pill }}</span>{% endif %}
+      </div>
+      <ol class="stages">
+        {% for r in mock.rows %}
+        <li class="stage{% if r.state %} stage--{{ r.state }}{% endif %}"><span class="stage__mark"></span><div><div class="stage__name">{{ r.name }}</div><div class="stage__sub">{{ r.sub }}</div></div><span class="stage__owner">{{ r.owner }}</span></li>
+        {% endfor %}
+      </ol>
+      <div class="mock__foot"><span>{{ mock.foot[0] }}</span><span>{{ mock.foot[1] }}</span></div>
+      <figcaption class="mock__caption" style="padding:0.75rem 1rem">Example with illustrative data.</figcaption>
+    </figure>
+    {% endif %}
+  </div>
+</section>
+
+{% if signs %}
+<section class="section section--raised reveal" id="signs" aria-labelledby="signs-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">{{ signs.eyebrow }}</p>
+      <h2 id="signs-h">{{ signs.h2 }}</h2>
+    </div>
+    <div class="tiles">
+      {% for t in signs.items %}<div class="tile"><h3>{{ t.h }}</h3><p>{{ t.p }}</p></div>{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if cards %}
+<section class="section section--raised reveal" id="list" aria-labelledby="cards-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">{{ cards.eyebrow }}</p>
+      <h2 id="cards-h">{{ cards.h2 }}</h2>
+      {% if cards.intro %}<p>{{ cards.intro }}</p>{% endif %}
+    </div>
+    <div class="modules">
+      {% for c in cards.items %}
+      <a class="module" href="{{ c.href }}">
+        <span class="module__tag">{{ c.tag }}</span>
+        <h3>{{ c.h }}</h3>
+        <p>{{ c.p }}</p>
+        <span class="module__more">{{ c.more | default("Read more") }} &rarr;</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if steps %}
+<section class="section{% if not cards %} section--raised{% endif %} reveal" aria-labelledby="steps-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">{{ steps.eyebrow }}</p>
+      <h2 id="steps-h">{{ steps.h2 }}</h2>
+      {% if steps.intro %}<p>{{ steps.intro }}</p>{% endif %}
+    </div>
+    <div class="flow">
+      {% for s in steps.items %}
+      <div class="flow__item">
+        <h3>{{ s.h }}</h3>
+        <p>{{ s.p }}</p>
+        {% if s.path %}<div class="flow__path">{% for x in s.path %}<span>{{ x }}</span>{% if not loop.last %}<i>&rarr;</i>{% endif %}{% endfor %}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if features %}
+<section class="section reveal" id="features" aria-labelledby="feat-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">{{ features.eyebrow }}</p>
+      <h2 id="feat-h">{{ features.h2 }}</h2>
+      {% if features.intro %}<p>{{ features.intro }}</p>{% endif %}
+    </div>
+    <div class="roles">
+      {% for f in features.items %}
+      <div class="role"><h3>{{ f.h }}</h3><p>{{ f.p }}</p>{% if f.li %}<ul>{% for x in f.li %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if table %}
+<section class="section section--raised reveal" aria-labelledby="table-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">{{ table.eyebrow }}</p>
+      <h2 id="table-h">{{ table.h2 }}</h2>
+      {% if table.intro %}<p>{{ table.intro }}</p>{% endif %}
+    </div>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr>{% for c in table.cols %}<th scope="col">{{ c }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for r in table.rows %}<tr>{% for cell in r %}{% if loop.first %}<th scope="row">{{ cell }}</th>{% else %}<td>{{ cell }}</td>{% endif %}{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% for sp in splits %}
+<section class="section{% if loop.index0 % 2 == 0 %} section--raised{% endif %} reveal" aria-labelledby="split{{ loop.index }}-h">
+  <div class="container split">
+    <div class="split__copy">
+      <p class="eyebrow">{{ sp.eyebrow }}</p>
+      <h2 id="split{{ loop.index }}-h">{{ sp.h2 }}</h2>
+      <p>{{ sp.p }}</p>
+      {% if sp.checks %}<ul class="checks">{% for x in sp.checks %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+      {% if sp.link %}<p><a class="link-arrow" href="{{ sp.link.href }}">{{ sp.link.label }} &rarr;</a></p>{% endif %}
+    </div>
+    <div class="split__visual">
+      <div class="ledger" role="group" aria-label="{{ sp.ledgerHead }}">
+        <div class="ledger__head">{{ sp.ledgerHead }}</div>
+        {% for r in sp.ledger %}
+        <div class="ledger__row"><span><b>{{ r.b }}</b><small>{{ r.small }}</small></span><span class="pill{% if r.pill_state %} pill--{{ r.pill_state }}{% endif %}">{{ r.pill }}</span></div>
+        {% endfor %}
+      </div>
+      <p class="mock__caption">Example entries with illustrative data.</p>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+{% if tiles %}
+<section class="section{% if splits | length % 2 == 0 %} section--raised{% endif %} reveal" aria-labelledby="tiles-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">{{ tiles.eyebrow }}</p>
+      <h2 id="tiles-h">{{ tiles.h2 }}</h2>
+      {% if tiles.p %}<p>{{ tiles.p }} {% if tiles.link %}<a href="{{ tiles.link.href }}">{{ tiles.link.label }}</a>{% endif %}</p>{% endif %}
+    </div>
+    <div class="tiles">
+      {% for t in tiles.items %}<div class="tile"><h3>{{ t.h }}</h3><p>{{ t.p }}</p></div>{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if related %}
+<section class="section reveal" aria-labelledby="rel-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Keep exploring</p>
+      <h2 id="rel-h">Connected pages.</h2>
+    </div>
+    <div class="tiles">
+      {% for t in related %}<a class="tile" href="{{ t.href }}"><h3>{{ t.h }} &rarr;</h3><p>{{ t.p }}</p></a>{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section--raised reveal" aria-labelledby="faq-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-h">{{ faqHeading | default("Common questions.") }}</h2>
+    </div>
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}

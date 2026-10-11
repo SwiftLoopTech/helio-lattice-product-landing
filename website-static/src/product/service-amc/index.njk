@@ -1,0 +1,125 @@
+---
+layout: layouts/module.njk
+title: "Solar AMC and Service Management Software | HelioLattice"
+description: "Bill AMC, log service tickets, record service costs, handle warranty replacements and recover vendor costs, all on the customer's own record."
+crumbs:
+  - name: Product
+    href: /product/
+  - name: AMC and service
+eyebrow: AMC and service
+h1: Keep every customer after the installation, and earn from them for years.
+lead: The job does not end at commissioning. HelioLattice keeps the customer's AMC billing, service tickets, service costs and warranty replacements on the same record as the original project, so support is quick and every service rupee is accounted for.
+heroSecondary:
+  href: "#features"
+  label: See what it does
+definition:
+  q: What does the AMC and service module do?
+  a: It records AMC invoices and receipts, service expenses, warranty replacements and vendor recovery against the customer and the project, and it tracks support tickets with priority, assignment and resolution, so the full after-sales history sits in one place.
+featureList:
+  - AMC invoices and receipts
+  - Support tickets with priority, assignment and resolution
+  - Service expenses
+  - Warranty replacement records
+  - Vendor recovery with a recorded decision
+  - Service and warranty reports
+schemaName: Solar AMC and service management
+mock:
+  label: Example after-sales history for one customer
+  title: Customer service history
+  job: Residential · 5 kW on-grid
+  meta: "Commissioned last year · Customer: S. Nair"
+  pill: Ticket open
+  rows:
+    - { name: "AMC invoice", sub: "Raised against the customer and project", owner: "Accounts" }
+    - { name: "AMC receipt", sub: "Payment recorded", owner: "Accounts" }
+    - { name: "Support ticket", sub: "Inverter fault, assigned to service", owner: "Service", state: "wait" }
+    - { name: "Warranty replacement", sub: "Vendor recovery decision pending", owner: "Owner", state: "idle" }
+  foot:
+    - "Service cost and recovery tracked"
+    - "Next owner: Service"
+steps:
+  eyebrow: How it works
+  h2: From first call to recovered cost.
+  intro: The same customer record that holds the sale now holds the support history, so nobody asks the customer to repeat anything.
+  items:
+    - h: Raise the ticket
+      p: A support ticket is created against the project with a priority, assigned to a person, and updated until it is resolved with notes.
+      path: ["Ticket", "Assigned", "Resolved"]
+    - h: Record the cost
+      p: Service expenses, spares and visits are recorded as service entries, so the real cost of after-sales is known.
+      path: ["Visit", "Expense", "Report"]
+    - h: Replace under warranty
+      p: A warranty replacement records the original and replacement product and the reason a purchase bill was not available.
+      path: ["Fault", "Replacement", "Record"]
+    - h: Recover from the vendor
+      p: Record the recovery amount and the decision on a vendor claim, so costs that should come back from a supplier are not forgotten.
+      path: ["Cost", "Claim", "Decision"]
+features:
+  eyebrow: What it does
+  h2: After-sales that pays for itself.
+  items:
+    - h: AMC billing
+      p: Raise AMC invoices and record AMC receipts against the customer and the project, so billing and collection sit with the rest of the customer's history.
+      li: ["AMC invoice and AMC receipt entries", "Linked to customer and project"]
+    - h: Support tickets
+      p: Every ticket has a number, a priority, an owner, a status and resolution notes. Tickets belong to the project they are about.
+      li: ["Assignment and resolution", "Ticket count on the customer record"]
+    - h: Service expenses
+      p: Record what a service visit cost, whether labour, spares or travel, and keep it against the customer.
+      li: ["Recorded with amount and reference", "Reported by service dimension"]
+    - h: Warranty replacements
+      p: Capture the product that failed, the replacement given and the purchase bill reference when there is one.
+      li: ["Original and replacement product", "Reason if no bill is available"]
+    - h: Vendor recovery
+      p: Note the amount to recover from the supplier and the decision taken, so warranty cost can flow back to you.
+      li: ["Recovery amount recorded", "Decision recorded"]
+    - h: Service and warranty reports
+      p: Summaries by service and by warranty show what after-sales costs and what it brings in.
+      li: ["Service dimension", "Warranty dimension"]
+splits:
+  - eyebrow: Customer for years
+    h2: One record from the first enquiry to the fifth year.
+    p: Because the survey, the quotation, the payments and the service entries live on one customer record, your team can answer a service call knowing the system size, the installation date, what was paid and what has been repaired.
+    checks:
+      - Service tickets attached to the original project
+      - Calls, notes and documents from the sale still visible
+      - AMC and service money next to project money
+      - Repeat business starts from a complete history
+    ledgerHead: Service and finance entries for one customer
+    ledger:
+      - { b: "AMC invoice", small: "Issued for the year", pill: "Issued" }
+      - { b: "AMC receipt", small: "Recorded against the invoice", pill: "Paid" }
+      - { b: "Service expense", small: "Recorded with the ticket reference", pill: "Approved", pill_state: "idle" }
+      - { b: "Warranty replacement", small: "Original and replacement recorded", pill: "Vendor recovery open", pill_state: "wait" }
+    link:
+      href: /problems/amc-and-service-follow-up/
+      label: Why service calls get forgotten
+tiles:
+  eyebrow: Also included
+  h2: Around after-sales.
+  items:
+    - { h: Reminders, p: "Contextual reminders on tickets and jobs." }
+    - { h: Documents, p: "Warranty papers stored with the project." }
+    - { h: Permissions, p: "Choose who sees service money." }
+    - { h: Reports, p: "Service and warranty summaries for owners." }
+related:
+  - { h: Payments and expenses, p: "How claims are reviewed and approved.", href: /product/finance/ }
+  - { h: Reports, p: "After-sales numbers for owners.", href: /product/reporting/ }
+  - { h: Roles and access, p: "Who can raise and close tickets.", href: /product/access-control/ }
+faq:
+  - q: Can we bill AMC from HelioLattice?
+    a: Yes. AMC invoices and AMC receipts are recorded against the customer and the project, so billing and collection sit next to the rest of the customer's history.
+  - q: How are support tickets handled?
+    a: A ticket is created against a project with a priority, assigned to a person and worked through to resolution, with notes recorded when it is closed.
+  - q: Can we recover warranty costs from suppliers?
+    a: Yes. A warranty replacement records the products involved, and vendor recovery records the amount to recover and the decision taken.
+  - q: Where does the service history live?
+    a: On the customer and the project, next to the original survey, quotation, payments and documents, so the whole story is in one place.
+  - q: Can service costs be reported?
+    a: Yes. Summaries by service and by warranty show service entries across your company.
+cta:
+  title: See a customer's whole history in one place.
+  body: Bring one installed customer and we will show the sale, the payments and the service together.
+  secondaryHref: /product/reporting/
+  secondaryLabel: "Next: reports"
+---

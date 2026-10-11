@@ -1,0 +1,87 @@
+---
+layout: layouts/module.njk
+title: "Solar CRM for Sales Heads and Managers | HelioLattice"
+description: "Assign enquiries in bulk, watch follow-ups and ageing, approve quotations and read funnel and source reports. The sales head view of HelioLattice."
+crumbs:
+  - name: Roles
+    href: /roles/
+  - name: Sales head
+eyebrow: For the sales head
+h1: Keep every enquiry moving and every quotation honest.
+lead: As sales head you answer for the pipeline, the team and the margin. HelioLattice shows you who has which enquiry, which follow-ups are overdue, which quotations await your approval and which sources actually convert.
+heroSecondary:
+  href: "#features"
+  label: What the sales head sees
+definition:
+  q: What does the sales head get?
+  a: Bulk assignment, follow-up and ageing visibility, an approval queue for quotations, sales scorecards and source and funnel reports, scoped to the team you manage.
+schemaName: HelioLattice for the sales head
+mock:
+  label: Example sales head queue
+  title: Sales queue
+  job: Today
+  meta: Team of 6 executives
+  pill: 4 quotations to approve
+  rows:
+    - { name: "New enquiries to assign", sub: "Bulk assign to executives", owner: "Sales head" }
+    - { name: "Follow-ups overdue", sub: "By executive", owner: "Team", state: "wait" }
+    - { name: "Quotations awaiting approval", sub: "Costing visible to approvers", owner: "Sales head" }
+    - { name: "Partner leads under review", sub: "Duplicate check", owner: "Sales head", state: "idle" }
+  foot:
+    - "Scoped to your team"
+    - "Reports built in"
+steps:
+  eyebrow: A day as the sales head
+  h2: From assignment to approval.
+  items:
+    - h: Assign
+      p: New enquiries and imported lists are assigned to executives in bulk, with a manager set for each list.
+      path: ["New", "Assign", "Owner"]
+    - h: Chase
+      p: See overdue follow-ups and lead ageing by executive, and request an internal follow-up from a colleague when needed.
+      path: ["Ageing", "Follow-up", "Request"]
+    - h: Approve
+      p: Review quotations in the approval queue with costing visible, then approve or reject with a reason.
+      path: ["Queue", "Costing", "Decision"]
+    - h: Learn
+      p: Read funnel, scorecard, source and lost-and-cold reports to coach the team and cut weak sources.
+      path: ["Funnel", "Scorecard", "Source"]
+features:
+  eyebrow: What the sales head sees
+  h2: Manage the team, not the spreadsheet.
+  items:
+    - h: Pipeline control
+      p: Assign, reassign and manage enquiries by person, role or list.
+      li: ["Bulk assignment", "Managed by person or role"]
+    - h: Follow-up discipline
+      p: Call outcomes, next follow-up dates and internal follow-up requests keep enquiries alive.
+      li: ["Call logging", "Request and response"]
+    - h: Quotation approval
+      p: One queue of pending quotations with margins visible to you.
+      li: ["Submit, approve, reject", "Revision history"]
+    - h: Partner leads
+      p: Review partner submissions, catch duplicates and convert good leads.
+      li: ["Duplicate check", "Convert to enquiry"]
+    - h: Performance reports
+      p: Sales performance, scorecards, source performance and funnel reports.
+      li: ["Lead ageing", "Lost and cold"]
+    - h: Team-scoped data
+      p: See your team's records without seeing other departments' work.
+      li: ["Managed scope", "Role-based reports"]
+related:
+  - { h: Enquiries and pipeline, p: "The module in detail.", href: /product/sales/ }
+  - { h: Survey and quotation, p: "Approvals and revisions.", href: /product/survey-quotation/ }
+  - { h: Operations head view, p: "Where won jobs go next.", href: /roles/operations-head/ }
+faq:
+  - q: Can I see only my own team's enquiries?
+    a: Yes. The managed scope shows enquiries managed by you and your direct reports.
+  - q: Can I approve quotations from one place?
+    a: Yes. Pending quotations appear in an approval queue for roles allowed to approve them.
+  - q: Can I see which sources convert?
+    a: Yes. Source performance, lead funnel and scorecard reports show where won jobs come from.
+cta:
+  title: See your team's pipeline in one queue.
+  body: Bring your current enquiry list and we will assign and follow it up in the demo.
+  secondaryHref: /product/sales/
+  secondaryLabel: "The enquiries module"
+---

@@ -1,0 +1,26 @@
+[
+  {
+    "q": "What is a solar CRM?",
+    "a": "A solar CRM tracks every enquiry from first contact to a signed job. HelioLattice does this with pipeline stages made for solar, roof and bill details on the enquiry, call and follow-up history, and a direct hand-off into survey, quotation and the delivery checklist."
+  },
+  {
+    "q": "How does HelioLattice stop duplicate enquiries?",
+    "a": "Each phone number is normalised and checked when an enquiry is created or imported. If the number already exists, the team sees the match. A user with the right permission can override it, and the reason for the override is recorded on the enquiry."
+  },
+  {
+    "q": "Can we import enquiries from a campaign, an expo or a spreadsheet?",
+    "a": "Yes. A bulk import shows a preview before anything is saved, marking each row as ready, invalid, a duplicate within the file or a duplicate of an existing enquiry. Imported enquiries are grouped into a list by source, such as a campaign, an expo or a partner."
+  },
+  {
+    "q": "How are enquiries assigned to the sales team?",
+    "a": "Each enquiry has an owner, an optional manager (a person or a role) and a site engineer. Enquiries can be assigned in bulk, and colleagues can be added as collaborators with view, work or manage access."
+  },
+  {
+    "q": "Does it log calls and WhatsApp conversations?",
+    "a": "Yes. Users call or message from a shared phonebook and record the outcome, such as connected, not answered, busy, wrong number or call back later. The call log keeps the status before and after, the next follow-up date and any recording attached to the enquiry."
+  },
+  {
+    "q": "Can channel partners send us enquiries?",
+    "a": "Yes. Partners submit enquiries through their own login, and team members can submit referrals too. Your team reviews each one, checks for duplicates, and converts it into an enquiry in your pipeline. The partner can follow its progress."
+  }
+]

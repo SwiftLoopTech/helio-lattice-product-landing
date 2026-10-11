@@ -1,0 +1,80 @@
+---
+layout: layouts/module.njk
+title: "Security and Access Control | HelioLattice"
+description: "How HelioLattice protects solar business data: role-based access, hashed passwords, email one-time codes, account lockout, session limits and an audit log."
+crumbs:
+  - name: Security
+eyebrow: Security
+h1: Your jobs, prices and customers, visible only to the right people.
+lead: A solar company holds customer details, margins, bank and subsidy information. HelioLattice limits who can see and change each of them, protects sign-in, and records what people do, so the business stays in your control.
+heroSecondary:
+  href: "#features"
+  label: See the controls
+definition:
+  q: How does HelioLattice protect data?
+  a: Through role-based permissions and data scopes, hashed passwords, optional email one-time-code sign-in, account lockout after repeated failures, rate limits, sessions that expire within 24 hours, separate partner sign-in and an audit log.
+featureList:
+  - Role-based permissions
+  - Email one-time-code sign-in
+  - Account lockout
+  - Audit log
+schemaName: HelioLattice security controls
+steps:
+  eyebrow: Layers of protection
+  h2: From sign-in to the record.
+  items:
+    - h: Sign in
+      p: Password sign-in, email one-time codes, or both, depending on how your business wants to work.
+      path: ["Password", "Email code", "Lockout"]
+    - h: Session
+      p: Sessions expire within 24 hours and sign-in cookies are held out of reach of page scripts.
+      path: ["24h limit", "Secure cookie", "Sign out"]
+    - h: Permissions
+      p: Roles decide which actions and reports a person can use, and data scopes decide which records.
+      path: ["Role", "Scope", "Record"]
+    - h: Record
+      p: Sensitive actions are written to an audit log that administrators can review.
+      path: ["Action", "Audit log", "Review"]
+features:
+  eyebrow: The controls
+  h2: What is in place.
+  items:
+    - h: Sign-in protection
+      p: Passwords are stored hashed, and an account locks for a period after repeated failed attempts.
+      li: ["Hashed passwords", "Lockout after five failures"]
+    - h: Email one-time codes
+      p: Sign in with a one-time code sent by email, with codes limited by rate controls.
+      li: ["Password, code or both", "Rate-limited attempts"]
+    - h: Session limits
+      p: Sessions end within 24 hours, and sign-in cookies are marked secure and HTTP only in production.
+      li: ["24-hour maximum", "Cookies not readable by scripts"]
+    - h: Roles and scopes
+      p: Permissions across 26 areas, custom roles and data scopes for all, assigned or managed records.
+      li: ["269 permissions", "Hidden internal costing"]
+    - h: Partner separation
+      p: Channel partners sign in to a separate portal and see only their own leads.
+      li: ["Separate sign-in", "Own leads only"]
+    - h: Audit log
+      p: Administrators can review what users did and when.
+      li: ["Who and when", "Reviewable by admins"]
+related:
+  - { h: Access control, p: "Roles and permissions in detail.", href: /product/access-control/ }
+  - { h: Owner view, p: "What an owner can see and steer.", href: /roles/owner/ }
+  - { h: Privacy policy, p: "How we handle website data.", href: /legal/privacy/ }
+faq:
+  - q: Can we limit who sees margins?
+    a: Yes. Internal costing on quotations is visible only to roles with that permission.
+  - q: Can staff sign in with a one-time code?
+    a: Yes. Sign-in can use a password, an email one-time code, or both.
+  - q: What happens after repeated wrong passwords?
+    a: The account locks for a period, and an administrator can unlock it.
+  - q: Do partners see our internal data?
+    a: No. Partners use a separate portal that shows only the leads they submitted.
+  - q: Where do I report a security concern?
+    a: Write to support@heliolattice.com.
+cta:
+  title: Ask about your own security needs.
+  body: Bring your questions on roles, access and data to the demo.
+  secondaryHref: /product/access-control/
+  secondaryLabel: "Access control"
+---

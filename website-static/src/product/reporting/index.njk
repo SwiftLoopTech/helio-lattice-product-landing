@@ -1,0 +1,125 @@
+---
+layout: layouts/module.njk
+title: "Solar Business Reports and Owner Dashboard | HelioLattice"
+description: "More than twenty reports on sales, quotations, projects, money and partners, plus an owner dashboard and a personal work queue for every user."
+crumbs:
+  - name: Product
+    href: /product/
+  - name: Reports
+eyebrow: Reports and work queue
+h1: See the whole company on one screen, without asking five people.
+lead: Reports on enquiries, quotations, site surveys, projects, money, partners and people are built into HelioLattice. Owners get a dashboard, managers get the reports for their area, and every user gets a personal queue of what is due today.
+heroSecondary:
+  href: "#features"
+  label: See the reports
+definition:
+  q: What reporting does HelioLattice include?
+  a: More than twenty ready reports across sales, operations, finance and people, an owner and sales dashboard, and a personal work queue. Reports are limited by role, so each person sees only the reports and data their permissions allow.
+featureList:
+  - Sales funnel, ageing, source and scorecard reports
+  - Quotation pipeline and cycle reports
+  - Project, survey, task and support reports
+  - Finance claims and accounts ageing reports
+  - Partner leads and commissions report
+  - Personal work queue and owner dashboard
+schemaName: Solar business reports and dashboards
+mock:
+  label: Example owner overview
+  title: Owner dashboard
+  job: This month
+  meta: Pipeline · Quotations · Projects · Money
+  pill: 6 enquiries ageing
+  rows:
+    - { name: "Enquiries by stage", sub: "Funnel from new to won", owner: "Sales" }
+    - { name: "Quotations pending approval", sub: "Cycle time shown", owner: "Sales head" }
+    - { name: "Projects idle for three days", sub: "Named owner on each", owner: "Projects", state: "wait" }
+    - { name: "Collections pending", sub: "By project", owner: "Accounts", state: "idle" }
+  foot:
+    - "Filter by date, user, source and stage"
+    - "Export summary to CSV"
+steps:
+  eyebrow: Where the numbers come from
+  h2: Reports built on the records your team already keeps.
+  intro: There is no separate data entry for reporting. Every report reads the calls, quotations, checklists and claims your team already records.
+  items:
+    - h: Calls and activity
+      p: Lead activity, verified calls, ageing and follow-ups come from the call and activity log.
+      path: ["Calls", "Follow-ups", "Ageing"]
+    - h: Quotations
+      p: Pipeline value, cycle time and approval status come from the quotation records.
+      path: ["Quotation", "Approval", "Cycle time"]
+    - h: Projects and tasks
+      p: Project status, task operations and support complaints come from the delivery checklist and ticket records.
+      path: ["Checklist", "Tasks", "Tickets"]
+    - h: Money and partners
+      p: Finance claims, accounts ageing and partner commissions come from the payment and partner records.
+      path: ["Claims", "Ageing", "Commissions"]
+features:
+  eyebrow: What is included
+  h2: Twenty-plus reports, grouped the way managers think.
+  items:
+    - h: Sales
+      p: Sales performance, lead funnel, lead ageing, sales rep scorecard, lost and cold leads, source performance, lead activity, internal follow-ups and internal referral performance.
+      li: ["Quotation pipeline", "Quotation cycle"]
+    - h: Operations
+      p: Site surveys, project status, task operations, support complaints and reminder operations show how work is moving after the sale.
+      li: ["Survey completion", "Open tickets"]
+    - h: Finance
+      p: Finance claims, accounts ageing and accounts export history give accounts and owners a view of what is pending and what has been exported.
+      li: ["Claims by status", "Receivable ageing"]
+    - h: People and partners
+      p: Attendance summary, partner leads and commissions, and user and role activity cover your team and your channel.
+      li: ["Partner performance", "Who did what"]
+    - h: Dashboard and work queue
+      p: An owner and sales dashboard summarises the business, and a personal work queue shows each user what needs attention today.
+      li: ["Open jobs and idle days", "Due tasks and follow-ups"]
+    - h: Filters and export
+      p: Filter by date range, user, source, stage and status, and export the summary of a report to CSV for sharing.
+      li: ["Date range up to 92 days", "CSV summary export"]
+splits:
+  - eyebrow: Role-scoped
+    h2: Each person sees the reports their role allows.
+    p: Report access is controlled one report at a time, and data is limited to what the person may see. A sales executive can read their own scorecard while the owner reads the whole company.
+    checks:
+      - Permissions per report
+      - Data limited to own, team or all
+      - A report matrix on each role
+      - User and role activity report for owners
+    ledgerHead: Who sees which report
+    ledger:
+      - { b: "Owner", small: "All reports, whole company", pill: "All" }
+      - { b: "Sales head", small: "Sales and quotation reports, team data", pill: "Team", pill_state: "idle" }
+      - { b: "Sales executive", small: "Own scorecard and follow-ups", pill: "Own", pill_state: "idle" }
+      - { b: "Accountant", small: "Finance and ageing reports", pill: "Finance", pill_state: "wait" }
+    link:
+      href: /product/access-control/
+      label: How roles and access work
+tiles:
+  eyebrow: Questions it answers
+  h2: The questions owners ask every week.
+  items:
+    - { h: Where do enquiries come from?, p: "Source performance by channel." }
+    - { h: Who is closing?, p: "Sales rep scorecard and funnel." }
+    - { h: What is stuck?, p: "Projects idle and tasks overdue." }
+    - { h: Who owes us?, p: "Accounts ageing and pending balances." }
+related:
+  - { h: Enquiries and pipeline, p: "The source of the sales reports.", href: /product/sales/ }
+  - { h: Payments and expenses, p: "The source of the finance reports.", href: /product/finance/ }
+  - { h: Roles and access, p: "Control who reads what.", href: /product/access-control/ }
+faq:
+  - q: How many reports are included?
+    a: More than twenty, covering sales, quotations, surveys, projects, tasks, support, finance, partners, attendance and user activity, plus an owner dashboard and a personal work queue.
+  - q: Can a manager see only their team's numbers?
+    a: Yes. Each report is permissioned separately, and data is limited to what the person's role allows, such as their own records, their team or the whole company.
+  - q: Can we export a report?
+    a: Yes. You can export a report summary to CSV after applying your filters.
+  - q: Do we have to enter data separately for reports?
+    a: No separate entry is needed. Reports read the calls, quotations, checklists, claims and tickets your team already records.
+  - q: What is the work queue?
+    a: A personal view for each user showing open jobs, idle days, due tasks and follow-ups, so people start the day knowing what needs them.
+cta:
+  title: See your own numbers in the reports.
+  body: Bring a few weeks of enquiries and jobs and we will show how the owner view looks.
+  secondaryHref: /product/access-control/
+  secondaryLabel: "Next: roles and access"
+---

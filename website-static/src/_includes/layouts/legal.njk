@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "{{ site.url }}{{ page.url }}#webpage",
+  "url": "{{ site.url }}{{ page.url }}",
+  "name": {{ h1 | dump | safe }},
+  "description": {{ description | dump | safe }},
+  "isPartOf": { "@id": "{{ site.url }}/#website" }
+}
+</script>
+
+<div class="container">
+  {% include "partials/breadcrumb.njk" %}
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h1>{{ h1 }}</h1>
+    <p class="page-hero__lead">{{ lead }}</p>
+    <p class="definition"><strong>Last updated</strong> {{ updated }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>

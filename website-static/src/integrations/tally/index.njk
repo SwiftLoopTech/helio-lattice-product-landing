@@ -1,0 +1,67 @@
+---
+layout: layouts/module.njk
+title: "Tally Export for Solar Projects | HelioLattice"
+description: "Export approved solar project claims from HelioLattice to Tally XML, Tally JSON or Excel, so your accountant keeps working in the software they know."
+crumbs:
+  - name: Integrations
+    href: /integrations/
+  - name: Tally
+eyebrow: Integrations · Tally
+h1: Let your accountant stay in Tally while the team works in HelioLattice.
+lead: Site expenses, receipts and payment requests are recorded by the people who incur them, reviewed and approved in HelioLattice, then exported in a format your accountant can import into Tally or open in Excel. Everyone keeps their own tool.
+heroSecondary:
+  href: "#features"
+  label: How the export works
+definition:
+  q: How does the Tally export work?
+  a: Approved claims are exported as Tally XML or Tally JSON vouchers, or as an Excel file. Each export is recorded in the export history so you know what was sent and when.
+schemaName: Tally export for solar projects
+steps:
+  eyebrow: How it works
+  h2: Record, approve, export, import.
+  items:
+    - h: Record in HelioLattice
+      p: Staff raise receipts, expenses and payment requests against the project, with proof.
+      path: ["Claim", "Project", "Proof"]
+    - h: Review and approve
+      p: Reviewers and approvers handle each claim, so what leaves HelioLattice has been checked.
+      path: ["Verify", "Approve", "Post"]
+    - h: Export
+      p: Choose the claims, then export to Tally XML, Tally JSON or Excel.
+      path: ["Filter", "Format", "Download"]
+    - h: Import in your accounting package
+      p: Your accountant imports the file into Tally or works from the Excel sheet.
+      path: ["Tally", "Excel", "History"]
+features:
+  eyebrow: What you get
+  h2: A clean handoff to accounts.
+  items:
+    - h: Three formats
+      p: Tally XML, Tally JSON and Excel exports of claims.
+      li: ["Voucher per claim", "Excel with claim columns"]
+    - h: Permissioned
+      p: Only roles with export permission can export, and each export is logged.
+      li: ["Role-based export access", "Export history report"]
+    - h: Project context
+      p: Claims carry their project and category, so accounts knows what each entry is for.
+      li: ["Linked to the project", "Category on each claim"]
+    - h: Less re-keying
+      p: The accountant imports checked data instead of retyping bills.
+      li: ["Reviewed before export", "Proof stays attached"]
+related:
+  - { h: Payments and expenses, p: "How claims are raised and approved.", href: /product/finance/ }
+  - { h: Accounts view, p: "The accountant's day.", href: /roles/accounts/ }
+  - { h: Integrations, p: "All connections.", href: /integrations/ }
+faq:
+  - q: Which Tally formats are supported?
+    a: Tally XML and Tally JSON, plus Excel for any package that accepts spreadsheets.
+  - q: Who can export?
+    a: Roles that hold the export permission. Every export is recorded in the export history.
+  - q: Do we need to change our accounting software?
+    a: No change is needed. HelioLattice handles the operational money workflow, and your accountant continues in the package they use.
+cta:
+  title: Show us your Tally workflow.
+  body: Bring a sample of your current process and we will show the export.
+  secondaryHref: /product/finance/
+  secondaryLabel: "The payments module"
+---

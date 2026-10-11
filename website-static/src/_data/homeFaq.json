@@ -1,0 +1,35 @@
+[
+  {
+    "q": "What is HelioLattice?",
+    "a": "HelioLattice is operations software for solar installation and EPC companies. It runs enquiries, site surveys, quotations, delivery checklists, material stock, payments and after-sales service on one job record, with role-based access for every team."
+  },
+  {
+    "q": "Who is HelioLattice built for?",
+    "a": "Rooftop solar installers and EPC companies that run many jobs at once: residential, commercial, or channel-led. The owner, sales team, surveyors, project managers, store, accounts and field crews each get the screens and permissions their work needs."
+  },
+  {
+    "q": "How is HelioLattice priced?",
+    "a": "One yearly plan covers every module. A one-time implementation fee covers the study of your business, configuration, and the data we set up for you before go-live. The fee depends on your scope, and we confirm both numbers in writing after a demo."
+  },
+  {
+    "q": "Can I control what each person sees and does?",
+    "a": "Yes. Roles are built from 269 individual permissions across 26 areas of the product. You can scope data to everything, only what is assigned to a person, or what their team manages, and restrict access at the level of individual delivery stages. Changes are recorded in an audit trail."
+  },
+  {
+    "q": "Can dealers and channel partners use it?",
+    "a": "Yes. Channel partners get a separate portal with their own login. They submit enquiries, follow the status of each one, and see their commission, while your team works on the same enquiries inside HelioLattice."
+  },
+  {
+    "q": "Does HelioLattice work with Tally and Excel?",
+    "a": "Yes. The payments and expenses module exports structured data to Excel, Tally XML and Tally JSON, so your accountant continues in the accounting package you already use."
+  },
+  {
+    "q": "Does it cover after-sales service and AMC?",
+    "a": "Yes. AMC invoices and receipts, service expenses, warranty replacements and vendor recovery are recorded against the customer and the project, with the service ticket reference noted, so the service history and its cost sit in one place. Support tickets link to the project they belong to."
+  },
+  {
+    "q": "Can HelioLattice send WhatsApp notifications?",
+    "a": "WhatsApp integration is part of the platform. Notification bots for your team and messaging bots for your customers are set up with you during implementation.",
+    "note": "VERIFY with owner: exact bot scope and what is delivered at go-live. Not rendered."
+  }
+]

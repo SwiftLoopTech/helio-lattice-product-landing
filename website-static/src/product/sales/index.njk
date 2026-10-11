@@ -1,0 +1,202 @@
+---
+layout: layouts/base.njk
+title: "Solar CRM and Lead Management Software | HelioLattice"
+description: "Solar-specific lead pipeline, duplicate check, bulk import, call logging, follow-ups and partner referrals, all linked to the survey, quote and job."
+crumbs:
+  - name: Product
+    href: /product/
+  - name: Enquiries and pipeline
+---
+{% set faqItems = salesFaq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "{{ site.url }}/product/sales/#webpage",
+  "url": "{{ site.url }}/product/sales/",
+  "name": "Solar CRM and lead management",
+  "description": "Enquiry capture, pipeline stages, assignment, follow-ups and call logging for solar installers.",
+  "isPartOf": { "@id": "{{ site.url }}/#website" },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "{{ site.name }}",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "featureList": [
+      "Solar-specific enquiry pipeline",
+      "Duplicate phone check with recorded override",
+      "Bulk import with preview",
+      "Assignment, collaborators and follow-ups",
+      "Call and WhatsApp logging",
+      "Partner and internal referrals"
+    ]
+  }
+}
+</script>
+
+<div class="container">
+  {% include "partials/breadcrumb.njk" %}
+</div>
+
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div>
+      <p class="eyebrow">Enquiries and pipeline</p>
+      <h1>A solar CRM that follows the enquiry all the way to the job.</h1>
+      <p class="page-hero__lead">Capture every enquiry with the details a solar sale depends on, assign it, log every call, and know exactly who follows up next. When the customer says yes, the enquiry carries its history straight into survey, quotation and delivery.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary btn--lg" href="/demo/">Book a demo</a>
+        <a class="btn btn--outline btn--lg" href="#features">See what it does</a>
+      </div>
+      <p class="definition"><strong>What does the enquiries module do?</strong> It holds every solar enquiry in one pipeline with roof, bill and project details, an owner, a next follow-up date and a full call and activity history, so no lead depends on one person&rsquo;s phone or memory.</p>
+    </div>
+
+    <figure class="mock" style="margin:0" aria-label="Example enquiry record with activity history">
+      <div class="mock__bar"><span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__title">Enquiry</span></div>
+      <div class="mock__head">
+        <div>
+          <div class="mock__job">Residential &middot; 5 kW on-grid</div>
+          <div class="mock__meta">Enquiry source: Expo &middot; Owner: Meera &middot; Priority: High</div>
+        </div>
+        <span class="pill pill--wait">Follow-up due today</span>
+      </div>
+      <ol class="stages">
+        <li class="stage"><span class="stage__mark"></span><div><div class="stage__name">First call</div><div class="stage__sub">Connected &middot; monthly bill and roof type noted</div></div><span class="stage__owner">Sales</span></li>
+        <li class="stage"><span class="stage__mark"></span><div><div class="stage__name">Site survey booked</div><div class="stage__sub">Site engineer assigned</div></div><span class="stage__owner">Surveyor</span></li>
+        <li class="stage stage--wait"><span class="stage__mark"></span><div><div class="stage__name">Proposal discussion</div><div class="stage__sub">Customer asked for a call back</div></div><span class="stage__owner">Sales head</span></li>
+        <li class="stage stage--idle"><span class="stage__mark"></span><div><div class="stage__name">Won and converted</div><div class="stage__sub">History moves to the customer and project</div></div><span class="stage__owner">Projects</span></li>
+      </ol>
+      <div class="mock__foot"><span>Next follow-up: today</span><span>Next owner: Sales</span></div>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--raised reveal" aria-labelledby="path-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">From first call to won job</p>
+      <h2 id="path-h">Four steps, one record.</h2>
+      <p>The same enquiry record is used by sales, the site engineer and the project team. Nothing is re-entered when it moves on.</p>
+    </div>
+    <div class="flow">
+      <div class="flow__item">
+        <h3>Capture</h3>
+        <p>Record the customer, city, monthly electricity bill, roof area and type, property type and whether the job is on-grid, off-grid, hybrid or micro-inverter. Note if subsidy or a bank loan is needed.</p>
+        <div class="flow__path"><span>Enquiry</span><i>&rarr;</i><span>Roof and bill</span><i>&rarr;</i><span>Project type</span></div>
+      </div>
+      <div class="flow__item">
+        <h3>Qualify and follow up</h3>
+        <p>Move the enquiry through solar-specific statuses, set priority, and schedule the next follow-up. Every call and note stays on the record.</p>
+        <div class="flow__path"><span>Contacted</span><i>&rarr;</i><span>Survey</span><i>&rarr;</i><span>Proposal</span></div>
+      </div>
+      <div class="flow__item">
+        <h3>Survey and quote</h3>
+        <p>Assign a site engineer from the enquiry. The survey and the priced quotation attach to the same record.</p>
+        <div class="flow__path"><span>Enquiry</span><i>&rarr;</i><span>Survey</span><i>&rarr;</i><span>Quotation</span></div>
+      </div>
+      <div class="flow__item">
+        <h3>Convert</h3>
+        <p>When the customer commits, the enquiry converts to a customer and a project. Calls, notes, documents and the survey carry across.</p>
+        <div class="flow__path"><span>Won</span><i>&rarr;</i><span>Customer</span><i>&rarr;</i><span>Project</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="features" aria-labelledby="feat-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">What it does</p>
+      <h2 id="feat-h">Built for how solar enquiries are actually worked.</h2>
+    </div>
+    <div class="roles">
+      <div class="role"><h3>A pipeline made for solar</h3><p>Eighteen built-in statuses cover the real journey, from contacted and site survey to feasibility, proposal, committed and won, plus cold, on hold, not feasible and existing solar.</p><ul><li>Priority and lead score</li><li>Residential and commercial types</li></ul></div>
+      <div class="role"><h3>Duplicate protection</h3><p>Phone numbers are normalised and matched on entry and on import. A user with permission can override a match, and the reason is saved on the enquiry.</p><ul><li>Alternate phone numbers</li><li>Override reason recorded</li></ul></div>
+      <div class="role"><h3>Bulk import with preview</h3><p>Upload a sheet from a campaign, an expo or a partner. Review every row before saving, then group the result as a list by source.</p><ul><li>Ready, invalid and duplicate rows flagged</li><li>Lists by source and default manager</li></ul></div>
+      <div class="role"><h3>Assignment and collaboration</h3><p>Give each enquiry an owner, a manager and a site engineer. Add colleagues as collaborators with view, work or manage access.</p><ul><li>Bulk assignment</li><li>Managed by a person or a role</li></ul></div>
+      <div class="role"><h3>Call and WhatsApp logging</h3><p>Call or message from a shared phonebook and record the outcome. The log keeps the status before and after, and the next follow-up date.</p><ul><li>Connected, busy, wrong number, call back later</li><li>Recordings attached to the enquiry</li></ul></div>
+      <div class="role"><h3>Internal follow-up requests</h3><p>Ask a colleague to act on an enquiry with a reason, a priority and a note. They respond on the same record, so nothing is lost in chat.</p><ul><li>Request, response and clarification</li><li>Notes, email and meeting history</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--raised reveal" aria-labelledby="imp-h">
+  <div class="container split">
+    <div class="split__copy">
+      <p class="eyebrow">Clean data from day one</p>
+      <h2 id="imp-h">Import a whole campaign without importing the duplicates.</h2>
+      <p>Expo sheets, campaign lists and partner files arrive messy. HelioLattice shows what will happen to each row before anything is saved, so your pipeline stays clean and your team does not call the same customer twice.</p>
+      <ul class="checks">
+        <li>Preview every row before the import runs</li>
+        <li>Duplicates inside the file and against existing enquiries are flagged</li>
+        <li>Each import becomes a list tagged by source</li>
+        <li>A default manager can be set for the whole list</li>
+      </ul>
+    </div>
+    <div class="split__visual">
+      <div class="ledger" role="group" aria-label="Example import preview">
+        <div class="ledger__head">Import preview &middot; expo list</div>
+        <div class="ledger__row"><span><b>Ready to import</b><small>New phone numbers, complete details</small></span><span class="pill">Ready</span></div>
+        <div class="ledger__row"><span><b>Duplicate in the file</b><small>Same number appears twice in the sheet</small></span><span class="pill pill--wait">Review</span></div>
+        <div class="ledger__row"><span><b>Already in the system</b><small>Matches an existing enquiry</small></span><span class="pill pill--wait">Review</span></div>
+        <div class="ledger__row"><span><b>Needs correction</b><small>Phone number missing or invalid</small></span><span class="pill pill--idle">Fix</span></div>
+      </div>
+      <p class="mock__caption">Example preview with illustrative rows.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="ref-h">
+  <div class="container split">
+    <div class="split__copy">
+      <p class="eyebrow">Referrals</p>
+      <h2 id="ref-h">Every referral reviewed before it reaches the pipeline.</h2>
+      <p>Channel partners and your own staff can submit referrals. Your team reviews each one, checks it for duplicates, declines it with a reason or converts it into an enquiry. A partner can see where each of their referrals stands.</p>
+      <ul class="checks">
+        <li>Referral numbers and a clear review status</li>
+        <li>Duplicate check before conversion</li>
+        <li>Decline reason and manager notes saved</li>
+        <li>Commission status tracked for each referral</li>
+      </ul>
+      <p><a class="link-arrow" href="/product/partners/">See the partner portal &rarr;</a></p>
+    </div>
+    <div class="split__visual">
+      <div class="ledger" role="group" aria-label="Example referral review">
+        <div class="ledger__head">Referral review</div>
+        <div class="ledger__row"><span><b>Submitted by a partner</b><small>Name, phone, city and notes</small></span><span class="pill pill--idle">Submitted</span></div>
+        <div class="ledger__row"><span><b>Checked for duplicates</b><small>Existing enquiry and customer lookup</small></span><span class="pill pill--wait">In review</span></div>
+        <div class="ledger__row"><span><b>Converted to enquiry</b><small>Appears in your pipeline with its source</small></span><span class="pill">Converted</span></div>
+      </div>
+      <p class="mock__caption">Example flow with illustrative entries.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--raised reveal" aria-labelledby="who-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Who uses it</p>
+      <h2 id="who-h">Each person sees the enquiries that are theirs.</h2>
+      <p>Permissions and data scopes decide who can create, assign, view or convert an enquiry. A sales executive can be limited to their own enquiries while a sales head sees the whole team. <a href="/product/access-control/">See how access control works.</a></p>
+    </div>
+    <div class="tiles">
+      <div class="tile"><h3>Sales executive</h3><p>Works assigned enquiries, logs calls and sets follow-ups.</p></div>
+      <div class="tile"><h3>Sales head</h3><p>Assigns in bulk and keeps every enquiry moving.</p></div>
+      <div class="tile"><h3>Site engineer</h3><p>Sees booked surveys and records them against the enquiry.</p></div>
+      <div class="tile"><h3>Owner</h3><p>Reads pipeline and source reports across the whole team.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="sfaq-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Questions</p>
+      <h2 id="sfaq-h">About enquiries and the pipeline.</h2>
+    </div>
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+
+{% set cta = { title: "See your own enquiries in the pipeline.", body: "Bring a recent expo sheet or a list of open enquiries and we will show how they are imported, assigned and followed up.", secondaryHref: "/product/survey-quotation/", secondaryLabel: "Next: survey and quotation" } %}
+{% include "partials/cta.njk" %}

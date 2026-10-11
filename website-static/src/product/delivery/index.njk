@@ -1,0 +1,137 @@
+---
+layout: layouts/module.njk
+title: "Solar Project Management and DISCOM Tracking | HelioLattice"
+description: "Define your solar delivery checklist once: stages, documents, DISCOM and subsidy steps, each assigned to a named person and tracked on every live job."
+crumbs:
+  - name: Product
+    href: /product/
+  - name: Delivery checklist
+eyebrow: Delivery checklist
+h1: Every solar job measured against your own delivery checklist.
+lead: Define the stages, documents and utility and subsidy steps once. Every live job follows that checklist, every stage has a named owner, and your project manager can see exactly where each job is waiting and for whom.
+heroSecondary:
+  href: "#features"
+  label: See what it does
+definition:
+  q: What is a delivery checklist in HelioLattice?
+  a: A configurable list of stages for a solar project, such as documents, utility approval, subsidy steps, material, installation and commissioning. Each item can be a checklist tick, a document to upload and verify, or a field to fill, and each stage can be assigned to one person.
+featureList:
+  - Configurable delivery stages and items
+  - Utility (DISCOM) and subsidy stages that switch on or off per job
+  - Stage assignment to named people
+  - Document upload and verification
+  - Tasks, reminders and a personal work queue
+  - Document generation from templates
+schemaName: Solar project delivery checklist and DISCOM tracking
+mock:
+  label: Example delivery checklist for one job
+  title: Delivery checklist
+  job: Residential · 5 kW on-grid
+  meta: "Job 1042 · Stage 4 of 13 · Project manager: Rahul"
+  pill: Waiting on utility papers
+  rows:
+    - { name: "Customer documents", sub: "Identity, bill and ownership proof verified", owner: "Documents" }
+    - { name: "Utility feasibility", sub: "Application submitted", owner: "Project manager" }
+    - { name: "Sanctioned load letter", sub: "Waiting for the customer to upload", owner: "Documents", state: "wait" }
+    - { name: "Installation", sub: "Starts after approvals", owner: "Field team", state: "idle" }
+  foot:
+    - "Open for 3 days"
+    - "Next owner: Documents"
+steps:
+  eyebrow: How it works
+  h2: Define once, run on every job.
+  intro: Your checklist belongs to your company. An administrator sets it up and every job after that follows it.
+  items:
+    - h: Define the stages
+      p: Build the stages and the items in each. An item can be a checklist tick, a document to upload, or a field to record, such as a consumer number or a coordinate.
+      path: ["Stages", "Items", "Required documents"]
+    - h: Switch steps on or off
+      p: Turn subsidy, bank loan and utility approval on or off for a job, and the stages that depend on them appear or disappear.
+      path: ["Subsidy", "Bank loan", "Utility approval"]
+    - h: Assign a person
+      p: Give each stage a named owner. A stage that is assigned can be worked by that person, with a clear override for managers.
+      path: ["Stage", "Owner", "Evidence"]
+    - h: Track every job
+      p: Statuses, progress and idle days show which jobs are moving and which are waiting, so you chase the right person.
+      path: ["Progress", "Idle days", "Blocked"]
+features:
+  eyebrow: What it does
+  h2: Built for the paperwork that slows rooftop solar jobs.
+  items:
+    - h: A checklist you control
+      p: Up to forty stages, each with its own items, document requirements and fields. Starter templates for on-grid and off-grid jobs give you a working base to edit.
+      li: ["Checklist, document and field items", "Statuses including waived and not applicable"]
+    - h: Utility and subsidy steps
+      p: Utility application, sanction, net metering and subsidy stages sit in the same checklist as the rest of the job, each with its documents and owner.
+      li: ["Stages appear only when they apply", "Subsidy application records on conversion"]
+    - h: Stage ownership
+      p: A stage that is assigned to someone is worked by that person. Anyone else is read-only unless they hold an override permission.
+      li: ["Named owner per stage", "Override for managers"]
+    - h: Document verification
+      p: Documents are uploaded to the job, then verified or rejected by the person responsible, so a missing or wrong document is visible immediately.
+      li: ["Pending, verified, rejected", "Stored with the job"]
+    - h: Tasks and reminders
+      p: Create tasks from templates for your team or for yourself, set priorities, mark a task blocked, and receive reminders tied to the job.
+      li: ["Personal, team and company templates", "Overdue tasks counted for managers"]
+    - h: Customer documents from templates
+      p: Generate agreements, letters and forms from your own templates, as PDF or Word, filled with the job's details.
+      li: ["Templates in HTML, PDF and Word", "Versions for each template"]
+splits:
+  - eyebrow: Clear ownership
+    h2: Everyone sees what is waiting, and for whom.
+    p: A job rarely stalls because nobody is working. It stalls because nobody knows whose turn it is. With a named owner on every stage, the project manager and the owner can see the exact item holding a job up.
+    checks:
+      - Each stage has one accountable person
+      - Jobs show progress and days since last activity
+      - Managers see every assignee and can step in
+      - Each person has a work queue of what is due
+    ledgerHead: Stage owners on one job
+    ledger:
+      - { b: "Customer documents", small: "Documents team", pill: "Done" }
+      - { b: "Utility feasibility", small: "Project manager", pill: "In progress", pill_state: "wait" }
+      - { b: "Material issue", small: "Store", pill: "Not started", pill_state: "idle" }
+      - { b: "Installation and commissioning", small: "Field team", pill: "Not started", pill_state: "idle" }
+    link:
+      href: /product/access-control/
+      label: How stage-level access works
+  - eyebrow: Start of the project
+    h2: Choose when an enquiry becomes a project.
+    p: Decide what makes a job real in your business. An advance payment, a signed agreement or a manager's approval can each trigger conversion into a customer and a project with the checklist ready.
+    checks:
+      - Advance payment, signed agreement or manual approval
+      - Customer and project created together
+      - Subsidy and bank-loan records created when needed
+    ledgerHead: Conversion options
+    ledger:
+      - { b: "Advance payment received", small: "Amount recorded on the project", pill: "Option" }
+      - { b: "Agreement signed", small: "Triggers on signature", pill: "Option" }
+      - { b: "Manager approval", small: "For special cases", pill: "Option" }
+tiles:
+  eyebrow: Around the checklist
+  h2: Daily tools for the field and the office.
+  items:
+    - { h: Personal work queue, p: "What is due today, per person." }
+    - { h: Task board, p: "Tasks with owners, priority and blocked status." }
+    - { h: Attendance, p: "Daily check-in and check-out for staff." }
+    - { h: Notifications, p: "Alerts for assignments and approvals." }
+related:
+  - { h: Survey and quotation, p: "The step before delivery begins.", href: /product/survey-quotation/ }
+  - { h: Materials and stock, p: "Issue material to the project.", href: /product/materials/ }
+  - { h: Problems we solve, p: "Jobs stuck on utility and subsidy paperwork.", href: /problems/discom-and-subsidy-delays/ }
+faq:
+  - q: Can we define our own delivery stages?
+    a: Yes. An administrator builds the stages, the items in each stage and the documents required. Every job is then measured against that checklist.
+  - q: Does it include utility and subsidy steps?
+    a: Yes. Utility application, sanction, net metering and subsidy stages can be part of your checklist. They appear only on jobs where they apply, based on switches for subsidy, bank loan and utility approval.
+  - q: Who can change a stage once it is assigned?
+    a: The assigned person works the stage. Other users see it read-only unless their role holds an override permission, which is usually given to managers.
+  - q: How are documents verified?
+    a: A document is uploaded to the job and set to pending. The responsible person then marks it verified or rejected, and the status shows on the checklist.
+  - q: Can we create agreements and letters from templates?
+    a: Yes. Document templates produce PDF and Word documents filled with the details of the customer and project.
+cta:
+  title: See your delivery steps in a live checklist.
+  body: Bring the steps a job goes through in your company and we will map them into a checklist with owners.
+  secondaryHref: /product/materials/
+  secondaryLabel: "Next: materials and stock"
+---

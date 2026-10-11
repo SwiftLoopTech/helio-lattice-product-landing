@@ -1,0 +1,139 @@
+---
+layout: layouts/module.njk
+title: "Role-Based Access Control for Solar ERP | HelioLattice"
+description: "269 permissions across 26 areas, custom roles, data scopes, stage-level locks, internal costing control and an audit log. Each person sees only their work."
+crumbs:
+  - name: Product
+    href: /product/
+  - name: Roles and access
+eyebrow: Roles and access
+h1: Every person sees their own work. Nothing more, nothing less.
+lead: HelioLattice gives you 269 permission controls across 26 areas of the product. Build the roles your company actually has, decide what each can see and do, and limit data to own, assigned or managed records. Margins, approvals and delivery stages stay with the right people.
+heroSecondary:
+  href: "#features"
+  label: See how it works
+definition:
+  q: What is role-based access in HelioLattice?
+  a: Every user holds one or more roles. A role is a set of permissions across modules, reports and the personal work queue. Data scopes then limit which records the person can see, such as all, assigned to them, or managed by them.
+featureList:
+  - 269 permissions across 26 areas
+  - Custom roles with a permission matrix
+  - Separate report permissions per role
+  - Data scopes for all, assigned and managed records
+  - Stage-level locks on delivery workflows
+  - Internal costing hidden by permission
+  - Separation of duties on claims
+  - Audit log
+schemaName: Role-based access control for solar ERP
+mock:
+  label: Example role permissions
+  title: "Role: Sales executive"
+  job: Permissions by area
+  meta: "Scope: assigned enquiries"
+  pill: Costing hidden
+  rows:
+    - { name: "Enquiries", sub: "Create, update and call, assigned records only", owner: "Allowed" }
+    - { name: "Quotations", sub: "Create and submit for approval", owner: "Allowed" }
+    - { name: "Internal costing", sub: "Margins and base cost", owner: "Hidden", state: "wait" }
+    - { name: "Finance claims", sub: "Approval and posting", owner: "No access", state: "idle" }
+  foot:
+    - "Report matrix applied"
+    - "Work queue limited to own tasks"
+steps:
+  eyebrow: How it works
+  h2: Roles, scopes, locks and a record of it all.
+  intro: Four layers work together, so access follows the way your company is organised.
+  items:
+    - h: Build roles
+      p: Create a role, choose its permissions module by module, set its report access and what appears in its work queue. Duplicate a role to make a variation.
+      path: ["Role", "Permissions", "Reports"]
+    - h: Set the scope
+      p: Decide whether a role sees all records, only the ones assigned to the user, or the ones managed by the user and their team.
+      path: ["All", "Assigned", "Managed"]
+    - h: Lock the stages
+      p: A delivery stage that is assigned to someone can be edited by that person. Others read it, unless they hold an override permission.
+      path: ["Stage", "Assignee", "Override"]
+    - h: Keep the record
+      p: Important actions are written to an audit log that administrators can search, and a user and role activity report shows who did what.
+      path: ["Action", "Audit log", "Report"]
+features:
+  eyebrow: What it does
+  h2: Flexible where you need it, firm where it matters.
+  items:
+    - h: 269 permission controls
+      p: Permissions cover leads, quotations, surveys, projects, materials, accounts, reports, partners, attendance and administration, grouped into 26 areas.
+      li: ["Grouped by module", "Assigned role by role"]
+    - h: Custom roles
+      p: Start from the roles you need, such as sales executive, project manager, accountant or auditor, and adjust them. Users can hold more than one role and switch between them.
+      li: ["Matrix editor for each role", "Duplicate to create variants"]
+    - h: Data scopes
+      p: Limit a role to the records assigned to the user, or open it to records managed by the user and their reports, or to all records.
+      li: ["Assigned or managed", "Managers see their team's work"]
+    - h: Margins stay private
+      p: Internal costing and margins are visible only to roles with that permission. Sales sees customer prices without seeing what a job costs you.
+      li: ["Cost and margin hidden", "Approval queue by permission"]
+    - h: Separation of duties
+      p: On money claims, the person who raised a claim cannot verify it. Submit, verify, approve and post are separate permissions.
+      li: ["Self-verification blocked", "Reviewer and approver recorded"]
+    - h: Audit log
+      p: Administrators can search a log of security-relevant actions, and a report shows user and role activity across the company.
+      li: ["Searchable audit log", "Login mode and session limits"]
+splits:
+  - eyebrow: Who sees what
+    h2: The same job, seen differently by each desk.
+    p: A surveyor needs the site details, the sales head needs the quote and its margin, the accountant needs the payments, and the owner needs all of it. Roles make that the default, so nobody has to ask for a screenshot.
+    checks:
+      - A role per desk, tuned to your company
+      - Data limited to own, assigned or managed records
+      - Reports and work queue follow the role
+      - Sensitive screens hidden entirely
+    ledgerHead: One job, four views
+    ledger:
+      - { b: "Site engineer", small: "Survey, photos and the checklist", pill: "Site", pill_state: "idle" }
+      - { b: "Sales head", small: "Quotation, approval and margin", pill: "Sales" }
+      - { b: "Accountant", small: "Receipts, claims and pending balance", pill: "Money", pill_state: "wait" }
+      - { b: "Owner", small: "The whole job and the whole company", pill: "Everything" }
+  - eyebrow: Partners
+    h2: Channel partners are kept entirely outside your team's system.
+    p: Partners sign in to a separate portal with its own login. They see their own leads and commission status and nothing else, while your staff manage them from inside.
+    checks:
+      - Separate authentication for partners
+      - Partner sees only their own leads and commissions
+      - Staff permissions to approve and manage partners
+    ledgerHead: Staff and partner access
+    ledger:
+      - { b: "Staff login", small: "Roles and scopes apply", pill: "Staff" }
+      - { b: "Partner login", small: "Own leads and commissions only", pill: "Partner", pill_state: "idle" }
+    link:
+      href: /product/partners/
+      label: See the partner portal
+tiles:
+  eyebrow: Starter roles
+  h2: Ready-made roles you can adapt.
+  p: HelioLattice includes starter roles for the common desks of a solar company. Adjust or duplicate any of them.
+  items:
+    - { h: Sales, p: "Sales manager, sales executive, quotation generator, quotation approver." }
+    - { h: Projects, p: "Project manager, site engineer, field technician, document collector." }
+    - { h: Accounts, p: "Finance manager, accountant, project accountant, AR and AP executives, stock accountant, auditor." }
+    - { h: Administration, p: "Super admin, admin, partner portal manager, attendance roles, customer support." }
+related:
+  - { h: Reports, p: "Role-scoped reports and the work queue.", href: /product/reporting/ }
+  - { h: Delivery checklist, p: "Stage owners and locks.", href: /product/delivery/ }
+  - { h: Security, p: "How access and data are protected.", href: /security/ }
+faq:
+  - q: Can we create our own roles?
+    a: Yes. Create roles, choose permissions module by module, set report access and work queue items, and duplicate a role to make a variant. A user can hold more than one role.
+  - q: Can a salesperson be limited to their own enquiries?
+    a: Yes. Data scopes let a role see only the records assigned to the user, while a manager's role can include records managed by their team.
+  - q: Can we hide margins from the sales team?
+    a: Yes. Internal costing and margin are shown only to roles that hold the internal costing permission.
+  - q: Is there an audit log?
+    a: Yes. Administrators can search an audit log, and a user and role activity report shows who did what across the company.
+  - q: Can a person approve their own expense?
+    a: The person who raised a claim cannot verify it, and submit, verify, approve and post are separate permissions.
+cta:
+  title: Map your team into roles.
+  body: Bring a list of the people and desks in your company and we will show how roles and scopes would look.
+  secondaryHref: /security/
+  secondaryLabel: "How we protect data"
+---

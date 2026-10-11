@@ -1,0 +1,106 @@
+---
+layout: layouts/base.njk
+title: "Book a Solar ERP Demo | HelioLattice"
+description: "Book a HelioLattice demo. Bring a few real open solar jobs and see enquiry, survey, quotation, delivery, stock and payments on your own work."
+crumbs:
+  - name: Book a demo
+---
+{% set faqItems = demoFaq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "{{ site.url }}/demo/#webpage",
+  "url": "{{ site.url }}/demo/",
+  "name": "Book a HelioLattice demo",
+  "description": "Request a walkthrough of HelioLattice on your own open solar jobs.",
+  "isPartOf": { "@id": "{{ site.url }}/#website" }
+}
+</script>
+
+<div class="container">
+  {% include "partials/breadcrumb.njk" %}
+</div>
+
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div>
+      <p class="eyebrow">Book a demo</p>
+      <h1>See HelioLattice on your own open jobs.</h1>
+      <p class="page-hero__lead">A demo is a working session on your own work. You bring a few real jobs from your pipeline, and we show how each one moves from enquiry to payment, who owns each step, and what your owner, sales head, store and accounts people would see.</p>
+      <ul class="checks checks--light">
+        <li>A walkthrough of the modules on jobs like yours</li>
+        <li>Your delivery stages, roles and price list mapped out</li>
+        <li>A written quote for your yearly plan and implementation fee afterwards</li>
+      </ul>
+    </div>
+
+    <div class="request" id="request">
+      <h2>Request your demo</h2>
+      {% if site.demoFormUrl %}
+      <iframe class="request__frame" src="{{ site.demoFormUrl }}" title="Demo request form" loading="lazy" width="100%" height="720">Loading form…</iframe>
+      {% else %}
+      <p>Send us a few details and we will reply with available times.</p>
+      <a class="btn btn--primary btn--lg request__btn" href="mailto:{{ site.email }}?subject=HelioLattice%20demo%20request&body=Company%20name%3A%0D%0ACity%20and%20state%3A%0D%0AApproximate%20number%20of%20open%20jobs%3A%0D%0AYour%20name%20and%20role%3A%0D%0APhone%3A%0D%0A">Email your demo request</a>
+      <p class="request__alt">Or write to <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      {% endif %}
+      <dl class="request__facts">
+        <div><dt>Format</dt><dd>Live session on your jobs</dd></div>
+        <div><dt>Bring</dt><dd>3 to 5 real open jobs</dd></div>
+        <div><dt>Afterwards</dt><dd>Quote in writing</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section section--raised reveal" aria-labelledby="cover-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">In the session</p>
+      <h2 id="cover-h">What we cover.</h2>
+    </div>
+    <div class="flow">
+      <div class="flow__item"><h3>Enquiry to quotation</h3><p>How enquiries are assigned and followed up, how a phone survey becomes a priced proposal, and how approvals and revisions are recorded.</p></div>
+      <div class="flow__item"><h3>Delivery and paperwork</h3><p>Your checklist of stages, documents and utility steps, with a named owner on each one and a clear view of what is waiting.</p></div>
+      <div class="flow__item"><h3>Stock and money</h3><p>Material issued against the project, receipts and expenses with approval, pending balances per job, and exports to your accountant.</p></div>
+      <div class="flow__item"><h3>Roles, partners and reports</h3><p>What each team member sees, how channel partners work in the same system, and the reports an owner reads each morning.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="bring-h">
+  <div class="container split">
+    <div class="split__copy">
+      <p class="eyebrow">To get the most from it</p>
+      <h2 id="bring-h">What to bring.</h2>
+      <p>None of this needs preparation. It simply lets us show HelioLattice on your work instead of sample data.</p>
+      <ul class="checks">
+        <li>Three to five open jobs at different stages</li>
+        <li>The steps a job goes through in your company today</li>
+        <li>Your current price list or catalogue, in any format</li>
+        <li>A list of the roles in your team, such as sales, survey, store and accounts</li>
+      </ul>
+    </div>
+    <div class="split__visual">
+      <ol class="steps">
+        <li><span class="steps__n">1</span><div><h3>Demo</h3><p>We walk through your jobs on the screens.</p></div></li>
+        <li><span class="steps__n">2</span><div><h3>Quote</h3><p>Your yearly plan and implementation fee, in writing.</p></div></li>
+        <li><span class="steps__n">3</span><div><h3>Implementation</h3><p>We study your business, configure stages, roles and catalogue, and set up your starting data.</p></div></li>
+        <li><span class="steps__n">4</span><div><h3>Go live</h3><p>Your team works on live jobs, with support from us.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section section--raised reveal" aria-labelledby="dfaq-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Questions</p>
+      <h2 id="dfaq-h">Before you book.</h2>
+    </div>
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+
+{% set cta = { title: "Ready to see your jobs in HelioLattice?", body: "Send your request and we will reply with times that suit you.", secondaryHref: "/product/", secondaryLabel: "Browse the product first" } %}
+{% include "partials/cta.njk" %}

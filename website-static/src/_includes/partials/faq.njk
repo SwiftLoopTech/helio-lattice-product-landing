@@ -1,0 +1,23 @@
+<div class="faq">
+  {%- for item in faqItems %}
+  <details>
+    <summary>{{ item.q }}</summary>
+    <div class="faq__a">{{ item.a }}</div>
+  </details>
+  {%- endfor %}
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqItems %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | dump | safe }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump | safe }} }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>

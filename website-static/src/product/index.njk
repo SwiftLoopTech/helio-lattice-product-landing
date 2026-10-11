@@ -1,0 +1,253 @@
+---
+layout: layouts/base.njk
+title: "Solar ERP Modules and Features | HelioLattice"
+description: "Nine connected modules for solar installers: enquiries, survey and quotation, delivery, stock, payments, AMC, reports, partners and access control."
+crumbs:
+  - name: Product
+---
+{% set faqItems = productFaq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "{{ site.url }}/product/#webpage",
+  "url": "{{ site.url }}/product/",
+  "name": "HelioLattice product overview",
+  "description": "Nine connected modules for solar installation and EPC companies, on one customer and one job record.",
+  "isPartOf": { "@id": "{{ site.url }}/#website" },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "{{ site.name }}",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "featureList": [
+      "Enquiry and sales pipeline",
+      "Phone site survey and priced quotation",
+      "Configurable delivery checklist",
+      "Materials and warehouse ledger",
+      "Payments and expenses with approval",
+      "AMC and service finance",
+      "Operational reports and work queue",
+      "Channel partner portal",
+      "Role-based access control"
+    ]
+  }
+}
+</script>
+
+<div class="container">
+  {% include "partials/breadcrumb.njk" %}
+</div>
+
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div>
+      <p class="eyebrow">Product</p>
+      <h1>Everything from first enquiry to AMC and service, on one record.</h1>
+      <p class="page-hero__lead">HelioLattice connects the work of sales, survey, projects, store, accounts and your channel partners. Each module reads and writes the same customer and the same job, so a fact is entered once and every team sees it.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary btn--lg" href="/demo/">Book a demo</a>
+        <a class="btn btn--outline btn--lg" href="#modules">Browse the modules</a>
+      </div>
+      <p class="definition"><strong>What is HelioLattice?</strong> Operations software for solar installation and EPC companies. It runs enquiries, site surveys, quotations, delivery checklists, material stock, payments and after-sales service on one job record, with role-based access for every team.</p>
+    </div>
+    <div class="hub" aria-hidden="true">
+      <div class="hub__core"><span>One customer</span><strong>One job record</strong></div>
+      <div class="hub__chips">
+        <span>Enquiries</span><span>Survey</span><span>Quotation</span>
+        <span>Delivery</span><span>Stock</span><span>Payments</span>
+        <span>Service and AMC</span><span>Reports</span><span>Partners</span>
+      </div>
+      <div class="hub__bar"><span class="dot"></span> Roles and access apply to every module</div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--raised" id="modules" aria-labelledby="mods-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Nine modules</p>
+      <h2 id="mods-h">One platform, one yearly plan, every module included.</h2>
+      <p>Pick any module to see how it works on a real job.</p>
+    </div>
+    <div class="modules">
+      <a class="module" href="/product/sales/">
+        <span class="module__tag">Sales</span>
+        <h3>Enquiries and pipeline</h3>
+        <ul>
+          <li>Solar-specific pipeline stages</li>
+          <li>Bulk import, assignment and follow-ups</li>
+          <li>Call logging and a shared phonebook</li>
+          <li>Internal and channel-partner referrals</li>
+        </ul>
+        <span class="module__more">Explore enquiries &rarr;</span>
+      </a>
+      <a class="module" href="/product/survey-quotation/">
+        <span class="module__tag">Survey and quote</span>
+        <h3>Phone survey to proposal</h3>
+        <ul>
+          <li>Roof, electrical and structural survey on a phone</li>
+          <li>Bill of materials priced from your catalogue</li>
+          <li>Approval queue and revision history</li>
+          <li>Customer proposal with savings and payback</li>
+        </ul>
+        <span class="module__more">Explore survey and quotation &rarr;</span>
+      </a>
+      <a class="module" href="/product/delivery/">
+        <span class="module__tag">Delivery</span>
+        <h3>Your delivery checklist</h3>
+        <ul>
+          <li>Stages, documents and utility steps you define</li>
+          <li>Each stage assigned to a named person</li>
+          <li>Every live job measured against the checklist</li>
+          <li>Tasks, reminders and document verification</li>
+        </ul>
+        <span class="module__more">Explore delivery &rarr;</span>
+      </a>
+      <a class="module" href="/product/materials/">
+        <span class="module__tag">Stock</span>
+        <h3>Materials and warehouses</h3>
+        <ul>
+          <li>Catalogue with brands and price history</li>
+          <li>Multiple warehouses and stock transfers</li>
+          <li>Issue to and return from projects</li>
+          <li>A full movement ledger</li>
+        </ul>
+        <span class="module__more">Explore materials &rarr;</span>
+      </a>
+      <a class="module" href="/product/finance/">
+        <span class="module__tag">Money</span>
+        <h3>Payments and expenses</h3>
+        <ul>
+          <li>Receipts, expenses and payment requests</li>
+          <li>Proof, review and approval on every claim</li>
+          <li>Receivables, payables and ledgers</li>
+          <li>Export to Excel, Tally XML and Tally JSON</li>
+        </ul>
+        <span class="module__more">Explore payments &rarr;</span>
+      </a>
+      <a class="module" href="/product/service-amc/">
+        <span class="module__tag">Service</span>
+        <h3>AMC and service finance</h3>
+        <ul>
+          <li>AMC invoices and receipts</li>
+          <li>Service expenses against the ticket</li>
+          <li>Warranty replacement and vendor recovery</li>
+          <li>Support tickets linked to the project</li>
+        </ul>
+        <span class="module__more">Explore service &rarr;</span>
+      </a>
+      <a class="module" href="/product/reporting/">
+        <span class="module__tag">Reports</span>
+        <h3>Owner and manager reports</h3>
+        <ul>
+          <li>Twenty-one reports across leads, jobs and money</li>
+          <li>Partner and salesperson performance</li>
+          <li>A personal work queue for every user</li>
+          <li>Role-scoped, so each person sees their own view</li>
+        </ul>
+        <span class="module__more">Explore reports &rarr;</span>
+      </a>
+      <a class="module" href="/product/partners/">
+        <span class="module__tag">Channel</span>
+        <h3>Partner portal</h3>
+        <ul>
+          <li>Separate login for dealers and agents</li>
+          <li>Submit enquiries and track each one</li>
+          <li>Commission status visible to the partner</li>
+          <li>Convert partner leads inside your team</li>
+        </ul>
+        <span class="module__more">Explore partners &rarr;</span>
+      </a>
+      <a class="module" href="/product/access-control/">
+        <span class="module__tag">Access</span>
+        <h3>Roles and permissions</h3>
+        <ul>
+          <li>269 permissions across 26 areas</li>
+          <li>Data scopes: all, assigned or managed</li>
+          <li>Stage-level access on delivery workflows</li>
+          <li>Audit trail of changes</li>
+        </ul>
+        <span class="module__more">Explore access control &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="conn-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">How the modules connect</p>
+      <h2 id="conn-h">Work done in one place shows up everywhere it matters.</h2>
+      <p>The value is in the links between modules. Each connection below removes a copy-paste step your team does today.</p>
+    </div>
+    <div class="flow">
+      <div class="flow__item">
+        <h3>Enquiry to customer</h3>
+        <p>A won enquiry converts to a customer and a project with its survey, call history and documents attached.</p>
+        <div class="flow__path"><span>Enquiry</span><i>&rarr;</i><span>Customer</span><i>&rarr;</i><span>Project</span></div>
+      </div>
+      <div class="flow__item">
+        <h3>Survey to quotation</h3>
+        <p>Survey details feed the quotation, which prices a bill of materials from the same catalogue the store maintains.</p>
+        <div class="flow__path"><span>Survey</span><i>&rarr;</i><span>Quotation</span><i>&rarr;</i><span>Approval</span></div>
+      </div>
+      <div class="flow__item">
+        <h3>Project to stock</h3>
+        <p>Material is issued from a warehouse to the project, and returns and transfers are recorded in the movement ledger.</p>
+        <div class="flow__path"><span>Project</span><i>&rarr;</i><span>Issue</span><i>&rarr;</i><span>Ledger</span></div>
+      </div>
+      <div class="flow__item">
+        <h3>Project to money</h3>
+        <p>Receipts, expenses and service costs are recorded against the same project, so pending balances are visible per job.</p>
+        <div class="flow__path"><span>Project</span><i>&rarr;</i><span>Receipts</span><i>&rarr;</i><span>Reports</span></div>
+      </div>
+      <div class="flow__item">
+        <h3>Partner to team</h3>
+        <p>An enquiry submitted by a channel partner appears in your pipeline, and the partner follows its status and commission.</p>
+        <div class="flow__path"><span>Partner</span><i>&rarr;</i><span>Pipeline</span><i>&rarr;</i><span>Commission</span></div>
+      </div>
+      <div class="flow__item">
+        <h3>Role to screen</h3>
+        <p>Permissions decide what each person can see and do on every one of these steps, down to the individual delivery stage.</p>
+        <div class="flow__path"><span>Role</span><i>&rarr;</i><span>Scope</span><i>&rarr;</i><span>Audit trail</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--raised reveal" aria-labelledby="also-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Also in the platform</p>
+      <h2 id="also-h">The daily tools your team already needs.</h2>
+    </div>
+    <div class="tiles">
+      <div class="tile"><h3>Personal work queue</h3><p>What is due today for each user.</p></div>
+      <div class="tile"><h3>Reminders</h3><p>Contextual reminders on leads and jobs.</p></div>
+      <div class="tile"><h3>Tasks</h3><p>A task board with assignment and teams.</p></div>
+      <div class="tile"><h3>Documents</h3><p>Upload, verify and download per job.</p></div>
+      <div class="tile"><h3>Document templates</h3><p>Generate customer documents from templates.</p></div>
+      <div class="tile"><h3>Call logging</h3><p>Dial from a shared phonebook and log outcomes.</p></div>
+      <div class="tile"><h3>Attendance</h3><p>Daily check-in and check-out for field staff.</p></div>
+      <div class="tile"><h3>Notifications</h3><p>In-app alerts for assignments and approvals.</p></div>
+      <div class="tile"><h3>Support tickets</h3><p>Raise and resolve tickets against a project.</p></div>
+      <div class="tile"><h3>Quick quote</h3><p>A fast quotation builder for simple jobs.</p></div>
+      <div class="tile"><h3>Regional helpers</h3><p>Kerala bill and transformer lookup for KSEB work.</p></div>
+      <div class="tile"><h3>Audit trail</h3><p>Who changed what, and when.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="pfaq-h">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Questions</p>
+      <h2 id="pfaq-h">About the platform.</h2>
+    </div>
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+
+{% set cta = { title: "See the modules on your own jobs.", body: "Bring a few real open jobs and we will walk through them module by module. We confirm your yearly plan and implementation fee in writing afterwards.", secondaryHref: "/product/access-control/", secondaryLabel: "How access control works" } %}
+{% include "partials/cta.njk" %}

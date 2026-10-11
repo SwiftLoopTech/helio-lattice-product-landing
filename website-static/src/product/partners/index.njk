@@ -1,0 +1,137 @@
+---
+layout: layouts/module.njk
+title: "Solar Channel Partner Portal and Commissions | HelioLattice"
+description: "Give dealers and agents their own login to submit enquiries, follow each one and see commission status, while your team reviews and converts them."
+crumbs:
+  - name: Product
+    href: /product/
+  - name: Partner portal
+eyebrow: Channel partners
+h1: Run your dealers and agents in one portal, not in a WhatsApp group.
+lead: Channel partners sign up, get approved, and log in to their own portal. They submit enquiries, follow each one through your pipeline and see commission status, while your team reviews, converts and tracks every partner lead.
+heroSecondary:
+  href: "#features"
+  label: See what it does
+definition:
+  q: What is the partner portal?
+  a: A separate login for dealers, agents and other channel partners. They submit leads, see the status of each, and see commission status and history. Your team approves partners, reviews their leads, converts good ones into enquiries and records commission.
+featureList:
+  - Separate partner login with email verification
+  - Partner lead submission and tracking
+  - Partner-visible status for every lead
+  - Commission status and event history
+  - Staff review, conversion to enquiry and archive
+  - Partner performance report
+schemaName: Solar channel partner portal and commission tracking
+mock:
+  label: Example partner dashboard
+  title: Partner portal
+  job: Partner · Sunrise Dealers
+  meta: Approved · 14 leads submitted this month
+  pill: 2 awaiting review
+  rows:
+    - { name: "Lead submitted", sub: "Residential, 5 kW, Kochi", owner: "Partner" }
+    - { name: "Under review", sub: "Your team is checking the lead", owner: "Sales head", state: "wait" }
+    - { name: "Accepted as enquiry", sub: "Appears in the pipeline", owner: "Sales", state: "idle" }
+    - { name: "Commission", sub: "Status visible to the partner", owner: "Accounts", state: "idle" }
+  foot:
+    - "Statuses the partner can see"
+    - "Next owner: Sales head"
+steps:
+  eyebrow: How it works
+  h2: From partner signup to commission.
+  intro: Partners get the visibility they ask for, and your team keeps control of what enters the pipeline.
+  items:
+    - h: Onboard
+      p: A partner signs up and verifies their email. Your team approves, suspends or rejects the account, so only partners you trust can submit.
+      path: ["Signup", "Verify", "Approved"]
+    - h: Submit
+      p: The partner submits a lead with the customer's details and notes, and can add remarks later from the lead's page.
+      path: ["New lead", "Details", "Remarks"]
+    - h: Review and convert
+      p: Your team reviews the lead, marks duplicates, rejects with a reason or converts it into an enquiry in your own pipeline.
+      path: ["Review", "Duplicate check", "Enquiry"]
+    - h: Track commission
+      p: Commission amount and status are recorded by your team, with a history of changes. The partner sees status and amount on their commissions page.
+      path: ["Pending", "Approved", "Paid"]
+features:
+  eyebrow: What it does
+  h2: Partner handling with accountability on both sides.
+  items:
+    - h: A separate, secure login
+      p: Partners sign in with their own credentials, with email verification, password reset and one-time codes. They never enter your staff system.
+      li: ["Signup, verify, login", "Approve, suspend or reject"]
+    - h: Lead submission and status
+      p: Partners submit leads and watch each one move, with a partner-friendly status that you control and an overall list they can filter.
+      li: ["Seven lead statuses", "Remarks from the partner"]
+    - h: Duplicate protection
+      p: A partner lead is blocked from conversion if an active enquiry already exists on the same phone number, so two partners do not chase the same customer.
+      li: ["Duplicate status on the lead", "Reviewed by your team"]
+    - h: Commission tracking
+      p: Record the commission amount and move it through pending, approved, paid or rejected, with payout reference and a full event history.
+      li: ["Visible to the partner", "Export their own commission list"]
+    - h: Admin controls
+      p: Approve partners, manage sessions, review an audit log, archive and restore leads, and configure the portal for your company.
+      li: ["Audit log and export", "Custom portal domain"]
+    - h: Partner performance
+      p: A staff report shows partner leads and commissions, so you know which partners send real business.
+      li: ["Leads and commissions report", "Role-scoped access"]
+splits:
+  - eyebrow: One pipeline
+    h2: Partner leads join your pipeline, with their source intact.
+    p: When your team accepts a partner lead, it becomes an enquiry in your own pipeline with the partner as its source. Sales works it like any other enquiry, and the partner keeps seeing its progress.
+    checks:
+      - Convert a partner lead into an enquiry
+      - Source recorded for reports
+      - Partner sees the status you choose to show
+      - Everything about the enquiry stays inside your team
+    ledgerHead: A partner lead through your team
+    ledger:
+      - { b: "Submitted by partner", small: "Customer details and notes", pill: "Submitted", pill_state: "idle" }
+      - { b: "Under review", small: "Duplicate check by your team", pill: "In review", pill_state: "wait" }
+      - { b: "Accepted as enquiry", small: "Enters your pipeline", pill: "Accepted" }
+      - { b: "Converted to customer", small: "Outcome recorded on the lead", pill: "Converted" }
+    link:
+      href: /problems/channel-partner-management/
+      label: Why partner programmes break down
+  - eyebrow: Transparency
+    h2: Fewer commission disputes, because both sides see the same status.
+    p: Partners lose trust when they cannot see what happened to their lead. A portal that shows every status and the commission history removes most of the calls and arguments.
+    checks:
+      - Status the partner can read at any time
+      - Commission history with each change
+      - Export of the partner's own commissions
+    ledgerHead: Commission record
+    ledger:
+      - { b: "Commission set", small: "Amount entered by your team", pill: "Pending", pill_state: "idle" }
+      - { b: "Commission approved", small: "Reference recorded", pill: "Approved" }
+      - { b: "Commission paid", small: "Payout reference noted", pill: "Paid" }
+tiles:
+  eyebrow: Also included
+  h2: Team members can refer too.
+  items:
+    - { h: Internal referrals, p: "Staff submit referrals for review and conversion." }
+    - { h: Duplicate result, p: "A referral is marked duplicate against existing records." }
+    - { h: Referral statuses, p: "Submitted, review, assigned, accepted, converted and closed." }
+    - { h: Referral reports, p: "Internal referral performance for managers." }
+related:
+  - { h: Enquiries and pipeline, p: "Where converted partner leads go.", href: /product/sales/ }
+  - { h: Channel-led businesses, p: "How channel-first companies use HelioLattice.", href: /solutions/channel/ }
+  - { h: Roles and access, p: "Staff and partner access are separate.", href: /product/access-control/ }
+faq:
+  - q: How do partners log in?
+    a: Partners have their own portal login, separate from your staff system. They sign up, verify their email and are approved by your team before they can submit leads.
+  - q: What can a partner see?
+    a: Their own leads, the status you show for each, remarks, and their commission status and history. They cannot see your other enquiries or customers.
+  - q: How is commission handled?
+    a: Your team records the commission amount and moves it through pending, approved and paid, with a reference and a history of every change. The partner sees the result.
+  - q: Can two partners submit the same customer?
+    a: A partner lead is stopped at conversion if an active enquiry already exists on that phone number, and the lead is marked as a duplicate for your team to review.
+  - q: Can partners use our own domain?
+    a: Yes. The portal can be set up on a custom domain with DNS verification.
+cta:
+  title: See a partner lead from submission to commission.
+  body: Bring your current partner list and we will show how they join, submit and follow leads.
+  secondaryHref: /solutions/channel/
+  secondaryLabel: "For channel-led businesses"
+---

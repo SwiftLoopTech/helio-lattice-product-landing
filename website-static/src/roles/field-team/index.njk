@@ -1,0 +1,87 @@
+---
+layout: layouts/module.njk
+title: "Solar Site Survey App for Field Teams | HelioLattice"
+description: "Surveyors complete the site survey on a phone, and field crews work an assigned list, upload evidence and mark stages. The field view of HelioLattice."
+crumbs:
+  - name: Roles
+    href: /roles/
+  - name: Field team
+eyebrow: For the field team
+h1: A clear list for the day, and a way to prove the work is done.
+lead: Surveyors and installation crews work away from the office. They need to know where to go, what to capture and what to upload, and the office needs the result without a phone call. HelioLattice gives the field team an assigned list and a phone-friendly survey.
+heroSecondary:
+  href: "#features"
+  label: What the field sees
+definition:
+  q: What does the field team get?
+  a: Assigned surveys and job stages, a phone-based survey with location and categorised photos, document and photo upload as evidence, tasks and a personal work queue, and attendance check-in and check-out.
+schemaName: HelioLattice for surveyors and field teams
+mock:
+  label: Example field work list
+  title: My work
+  job: Today
+  meta: Assigned to Anil
+  pill: 2 surveys booked
+  rows:
+    - { name: "Survey, Kochi", sub: "Residential, 5 kW", owner: "Surveyor" }
+    - { name: "Survey, Aluva", sub: "Residential, 3 kW", owner: "Surveyor" }
+    - { name: "Upload installation photos", sub: "Job 1042", owner: "Field team", state: "wait" }
+    - { name: "Check out", sub: "End of day", owner: "Field team", state: "idle" }
+  foot:
+    - "Works in a mobile browser"
+    - "Evidence on the job"
+steps:
+  eyebrow: A day in the field
+  h2: Survey, install, upload, close.
+  items:
+    - h: See the list
+      p: Open My Work to see assigned surveys, stages and tasks for the day.
+      path: ["Assigned", "Today", "Tasks"]
+    - h: Complete the survey
+      p: Record location, roof, electrical and structural details and photos in categories, then give the verdict.
+      path: ["Location", "Details", "Photos"]
+    - h: Install and evidence
+      p: Work the assigned stage and upload photos and documents to the job as proof.
+      path: ["Stage", "Upload", "Verify"]
+    - h: Close the day
+      p: Check out, with tasks updated and blocked items marked for the office.
+      path: ["Tasks", "Blocked", "Check-out"]
+features:
+  eyebrow: What the field sees
+  h2: Built for work away from a desk.
+  items:
+    - h: Phone-friendly survey
+      p: A structured survey with up to nine photo categories and a captured location.
+      li: ["Verdict and recommendation", "Survey templates"]
+    - h: Assigned work
+      p: Only the surveys, stages and tasks assigned to the person, in one list.
+      li: ["Assigned scope", "Personal work queue"]
+    - h: Evidence upload
+      p: Photos and documents are attached to the job and checked by the office.
+      li: ["Pending, verified, rejected", "Stored with the job"]
+    - h: Stage ownership
+      p: Work the stages you own, and see the rest of the job read-only.
+      li: ["Locks by stage", "Manager override"]
+    - h: Tasks
+      p: Task boards with priority, due dates and blocked status.
+      li: ["Task templates", "Reminders"]
+    - h: Attendance
+      p: Daily check-in and check-out for field staff.
+      li: ["Attendance summary", "Role-based access"]
+related:
+  - { h: Survey and quotation, p: "What happens to the survey.", href: /product/survey-quotation/ }
+  - { h: Delivery checklist, p: "The stages crews work.", href: /product/delivery/ }
+  - { h: Operations head view, p: "The office side.", href: /roles/operations-head/ }
+faq:
+  - q: Do surveyors need an app?
+    a: They use a mobile browser. The survey captures location, roof, electrical and structural details and categorised photos.
+  - q: What do crews see?
+    a: Only the surveys, stages and tasks assigned to them, in a personal work queue.
+  - q: How is evidence shared with the office?
+    a: Photos and documents are uploaded to the job, and the responsible person verifies them.
+cta:
+  title: See the field day in HelioLattice.
+  body: Bring one survey and one installation and we will walk both on a phone.
+  secondaryHref: /product/delivery/
+  secondaryLabel: "The delivery module"
+---

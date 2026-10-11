@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="/" aria-label="{{ site.name }} home">
+      <img src="/brand/heliolattice-logo.png" width="123" height="34" alt="{{ site.name }}">
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" data-nav aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="/product/"{% if page.url == '/product/' %} aria-current="page"{% endif %}>Product</a></li>
+        <li><a class="nav__link" href="/solutions/residential/">Solutions</a></li>
+        <li><a class="nav__link" href="/problems/"{% if page.url == '/problems/' %} aria-current="page"{% endif %}>Problems solved</a></li>
+        <li><a class="nav__link" href="/roles/"{% if page.url == '/roles/' %} aria-current="page"{% endif %}>Roles</a></li>
+        <li><a class="nav__link" href="/pricing/"{% if page.url == '/pricing/' %} aria-current="page"{% endif %}>Pricing</a></li>
+        <li><a class="nav__link" href="/resources/"{% if page.url == '/resources/' %} aria-current="page"{% endif %}>Resources</a></li>
+        <li><a class="btn btn--primary nav__cta" href="/demo/">Book a demo</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

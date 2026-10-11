@@ -1,0 +1,21 @@
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    {%- for c in crumbs %}
+    {%- if c.href %}<li><a href="{{ c.href }}">{{ c.name }}</a></li>
+    {%- else %}<li aria-current="page">{{ c.name }}</li>{% endif %}
+    {%- endfor %}
+  </ol>
+</nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" }
+    {%- for c in crumbs %},
+    { "@type": "ListItem", "position": {{ loop.index + 1 }}, "name": {{ c.name | dump | safe }}, "item": "{{ site.url }}{{ c.href or page.url }}" }
+    {%- endfor %}
+  ]
+}
+</script>

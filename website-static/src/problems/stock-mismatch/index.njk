@@ -1,0 +1,77 @@
+---
+layout: layouts/module.njk
+title: "Fix Solar Stock Mismatch and Material Gaps | HelioLattice"
+description: "Panels, inverters and cables that do not match the books cost solar installers on installation day. A stock ledger by warehouse and project fixes it."
+crumbs:
+  - name: Problems we solve
+    href: /problems/
+  - name: Stock mismatch
+eyebrow: Problems we solve · Stock
+h1: Stop finding out on installation day that the material is not there.
+lead: The crew reaches the site and the inverter is still in the other branch. The books say forty panels, the shelf has thirty-two. Unused cable never comes back. Stock mismatch delays installations, inflates costs and makes every month-end count painful.
+heroSecondary:
+  href: "#signs"
+  label: See the signs
+definition:
+  q: What is a stock mismatch?
+  a: A gap between the quantity recorded and the quantity actually held, usually because issues, returns, transfers and losses are not recorded as they happen. A movement ledger by warehouse and project closes the gap.
+schemaName: Solar stock mismatch and material gaps
+signs:
+  eyebrow: Signs you have it
+  h2: Where stock goes missing.
+  items:
+    - { h: Surprises on site, p: "Missing items discovered when the crew arrives." }
+    - { h: Month-end counts, p: "Physical counts that never match the sheet." }
+    - { h: Unreturned material, p: "Leftovers that never reach the store again." }
+    - { h: Branch confusion, p: "Nobody knows which branch or vehicle holds what." }
+steps:
+  eyebrow: How HelioLattice fixes it
+  h2: Every movement recorded, every number explained.
+  items:
+    - h: One catalogue
+      p: Items, brands, units and specifications are defined once and used by quotations and the store.
+      path: ["Catalogue", "Brand", "Unit"]
+    - h: Record receipts
+      p: Purchases and opening stock go into a named warehouse with their cost.
+      path: ["Purchase", "Receipt", "Warehouse"]
+    - h: Transfer and issue
+      p: Move stock between stores and vehicles, issue to a project and take returns, each as a recorded movement.
+      path: ["Transfer", "Issue", "Return"]
+    - h: Read availability
+      p: See on-hand, reserved and available quantity, with an alert when stock reaches the reorder level.
+      path: ["On hand", "Reserved", "Available"]
+features:
+  eyebrow: What changes
+  h2: A store you can trust.
+  items:
+    - h: Multiple warehouses
+      p: Main store, branch, site, vehicle and temporary locations each hold their own stock.
+      li: ["Paired transfers", "Warehouse types"]
+    - h: A full ledger
+      p: Ten movement types, each with quantity, cost and reference, explain every change.
+      li: ["Purchase, issue, return", "Damage and loss with reason"]
+    - h: Reservations
+      p: Hold stock for an upcoming job so another job cannot take it.
+      li: ["Reserved quantity", "Release when not needed"]
+    - h: Low stock alerts
+      p: Users see an alert when available stock falls to the reorder level.
+      li: ["Reorder level per item", "In-app notification"]
+related:
+  - { h: Materials and stock, p: "The module behind this fix.", href: /product/materials/ }
+  - { h: Survey and quotation, p: "Same catalogue for quotes.", href: /product/survey-quotation/ }
+  - { h: Payments and expenses, p: "Stock value reaches accounts.", href: /product/finance/ }
+faq:
+  - q: How do we keep stock accurate across branches?
+    a: Create a warehouse for each location and move stock with transfers. Each transfer records a movement out and a movement in, so both sides stay accurate.
+  - q: Can we see what was issued to a project?
+    a: Yes. Issues and returns are recorded against the project, so the material that went into a job is visible.
+  - q: Can we hold stock for a job before issuing it?
+    a: Yes. Reservations reduce available quantity so another job cannot take the same items.
+  - q: Does damaged stock get recorded?
+    a: Yes. Damage and loss are recorded as movements with a reason.
+cta:
+  title: See your stock explained, movement by movement.
+  body: Bring your item list and we will set up a catalogue and a warehouse in the demo.
+  secondaryHref: /product/materials/
+  secondaryLabel: "The materials module"
+---
