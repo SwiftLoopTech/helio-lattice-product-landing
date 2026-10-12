@@ -1,71 +1,61 @@
-# Demo request form: setup guide
+# Demo request form: how it works
 
-The `/demo/` page shows a pre-filled email request until a form URL is set. Once `demoFormUrl` is set in `website-static/src/_data/site.json`, the page embeds the form automatically and keeps the email option beside it.
+The `/demo/` page has our own form (native HTML, styled like the site). When someone submits it, the browser sends the answers straight to a Google Form, so every request lands in the form's linked Google Sheet. The Google Form is only the inbox; visitors never see it.
 
-## 1. Create the form (Google Forms)
+## How it is wired
 
-Sign in at `forms.google.com` with the account that should own the responses, preferably a shared company account rather than a personal one.
+| Piece | Where |
+|---|---|
+| Field list (labels, types, options, `entry.` IDs) | `website-static/src/_data/demoForm.json` |
+| Markup (loops over the field list) | `website-static/src/demo/index.njk` |
+| Submit script (validation, send, success or error, analytics) | `website-static/src/js/lead-form.js` |
+| Styles | `.lead*` in `website-static/src/css/site.css` |
 
-Title: **Request a HelioLattice demo**
-Description: `Tell us about your solar business and we will reply by email. We confirm your plan and implementation fee in writing after the demo.`
+Submission: `fetch` POST to `https://docs.google.com/forms/d/e/<FORM_ID>/formResponse` with `entry.<id>=value` pairs plus `fvv=1` and `pageHistory=0`, using `mode: "no-cors"`.
 
-| # | Question | Type | Required |
+## Field map (current form)
+
+| Our field | Google entry | Type | Required |
 |---|---|---|---|
-| 1 | Company name | Short answer | Yes |
-| 2 | City and state | Short answer | Yes |
-| 3 | Your name | Short answer | Yes |
-| 4 | Your role | Dropdown: Owner or director, Sales head, Operations head, Accounts, Other | Yes |
-| 5 | Work email | Short answer, response validation: Text, Email | Yes |
-| 6 | Phone or WhatsApp number | Short answer, validation: Number | Yes |
-| 7 | Approximate number of open jobs | Dropdown: Under 20, 20 to 50, 51 to 150, Over 150 | Yes |
-| 8 | What do you do mostly | Checkboxes: Residential, Commercial, Industrial, Channel partner network | No |
-| 9 | What would you like to see in the demo | Paragraph | No |
+| Company name | `entry.1098891983` | Short answer | Yes |
+| City and state | `entry.1984688009` | Short answer | Yes |
+| Your name | `entry.1365847242` | Short answer | Yes |
+| Your role | `entry.1738014259` | Dropdown | Yes |
+| Work email | `entry.1478875519` | Short answer (email) | Yes |
+| Phone or WhatsApp number | `entry.77813101` | Short answer (number pattern) | Yes |
+| Approximate number of open jobs | `entry.1131442109` | Dropdown | Yes |
+| What do you do mostly | `entry.875512129` | Checkboxes (several values) | No |
+| What would you like to see in the demo | `entry.179720708` | Paragraph | No |
 
-Do not ask for bank, tax or ID details.
+Dropdown and checkbox values must match the Google Form option text exactly, otherwise Google rejects or drops the answer.
 
-## 2. Settings
+## Changing the form later
 
-- Settings, Responses: leave "Collect email addresses" **off** (question 5 already collects it).
-- Settings, Responses: "Send responders a copy" can stay off.
-- Settings, Presentation: edit the confirmation message to `Thank you. We will email you within one working day to set up your demo.` Only promise a response time you can keep.
-- Responses tab: click the green Sheets icon to create a linked Google Sheet.
-- Responses tab, three dots: turn on **Get email notifications for new responses** for the account that handles demos. Better: add the team address as a collaborator on the form, so several people get notified.
+1. Edit the question in the Google Form first.
+2. Get its new entry ID: open the live form, view page source, search `FB_PUBLIC_LOAD_DATA_`; or use the form's "Get pre-filled link" and read the `entry.NNN` names.
+3. Update `demoForm.json` (label, type, options, entry ID). The page rebuilds from it.
+4. If you add a required question in Google, add the same field here, or submissions will be rejected.
 
-## 3. Get the embed URL
+## Settings in Google
 
-1. Click **Send**.
-2. Choose the `<>` (embed) tab.
-3. Copy only the `src` value. It looks like `https://docs.google.com/forms/d/e/1FAIpQL.../viewform?embedded=true`.
+- Responses tab: click the green Sheets icon to link a Google Sheet.
+- Responses tab, three dots: **Get email notifications for new responses**, or add a team address as collaborator.
+- "Limit to 1 response" and "Require sign-in" must stay **off**, otherwise anonymous posts are refused.
+- Keep sheet sharing limited to the demo team.
 
-## 4. Put it on the site
+## Analytics
 
-Edit `website-static/src/_data/site.json`:
+On a successful send the script fires GA4 event `generate_lead` (with `form_id`, `jobs_band`, `role`) and a Clarity event `demo_request_submitted`. In GA4: Admin, Events, mark `generate_lead` as a key event.
 
-```json
-"demoFormUrl": "https://docs.google.com/forms/d/e/XXXX/viewform?embedded=true"
-```
+## Limits to know
 
-Then rebuild (a push does this) and open `/demo/`. The form appears in the request card.
+- `no-cors` returns an opaque response, so the page cannot read Google's reply. It treats "the request left the browser" as success and shows the error panel (with the email fallback) only on a network failure. If you change the Google Form and a field mismatches, the page can still show success while Google drops the row, so always run the test below after any form change.
+- A honeypot field (`website`) quietly drops simple bots. If spam grows, add Cloudflare Turnstile.
+- Without JavaScript the form posts into a hidden frame and the page shows a mailto line; the email address on the page is the fallback.
 
-## 5. Check before launch
+## Test before launch
 
-- Submit a test response from a phone and from a desktop.
-- Confirm the notification email arrives and the sheet row appears.
-- Check the form height on a 390 px screen. The iframe is 720 px tall. If a long form scrolls inside itself, raise `height` in `src/demo/index.njk`.
-- Delete the test rows from the sheet.
-
-## 6. Limits to know
-
-- GA4 cannot see inside the Google Form iframe, so a form submission does not show as a conversion by itself. To count demo requests, either treat visits to `/demo/` as the funnel step and count rows in the sheet, or later replace the embed with a native form that redirects to a `/demo/thanks/` page.
-- Google Forms stores personal data, so the privacy policy already names "form or email providers". Keep the sheet's sharing limited to the demo team.
-- The email fallback stays on the page for anyone whose browser blocks the embed.
-
-## 7. Alternatives, if you prefer
-
-| Option | Good for | Cost |
-|---|---|---|
-| Google Forms embed (recommended to start) | Zero cost, response sheet, quick | Free |
-| Tally.so form | Nicer look, can redirect to a thank-you page | Free tier |
-| Native HTML form posting to a small Cloudflare Worker that emails the team | Full control, a thank-you page and conversion tracking | Needs a Worker and an email sender |
-
-I can create the Google Form for you in the browser if you sign in to Google there. Tell me when you are signed in.
+- Submit one real test from desktop and one from a phone.
+- Confirm the row appears in the Sheet with every column filled (check the multi-select and the dropdowns).
+- Confirm the notification email arrives, and the GA4 DebugView shows `generate_lead`.
+- Delete the test rows.

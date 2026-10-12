@@ -37,13 +37,54 @@ crumbs:
 
     <div class="request" id="request">
       <h2>Request your demo</h2>
-      {% if site.demoFormUrl %}
-      <iframe class="request__frame" src="{{ site.demoFormUrl }}" title="Demo request form" loading="lazy" width="100%" height="1020">Loading form…</iframe>
-      {% else %}
-      <p>Send us a few details and we will reply with available times.</p>
-      <a class="btn btn--primary btn--lg request__btn" href="mailto:{{ site.email }}?subject=HelioLattice%20demo%20request&body=Company%20name%3A%0D%0ACity%20and%20state%3A%0D%0AApproximate%20number%20of%20open%20jobs%3A%0D%0AYour%20name%20and%20role%3A%0D%0APhone%3A%0D%0A">Email your demo request</a>
-      <p class="request__alt">Or write to <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      {% endif %}
+      <div data-lead-panel>
+        <form class="lead" data-lead-form action="{{ demoForm.action }}" method="post" target="lead-sink">
+          <p class="lead__intro">Tell us a little about your business and we will reply by email with available times.</p>
+          <div class="lead__grid">
+          {%- for f in demoForm.fields %}
+            {%- set fid = "lead-" + f.name %}
+            {%- if f.type == "checkbox" %}
+            <fieldset class="lead__field lead__field--full lead__checks">
+              <legend>{{ f.label }}{% if not f.required %} <span class="lead__opt">(optional)</span>{% endif %}</legend>
+              <div class="lead__checklist">
+                {%- for o in f.options %}
+                <label class="lead__check"><input type="checkbox" name="{{ f.entry }}" value="{{ o }}"> <span>{{ o }}</span></label>
+                {%- endfor %}
+              </div>
+            </fieldset>
+            {%- else %}
+            <div class="lead__field{% if not f.half %} lead__field--full{% endif %}">
+              <label for="{{ fid }}">{{ f.label }}{% if not f.required %} <span class="lead__opt">(optional)</span>{% endif %}</label>
+              {%- if f.type == "select" %}
+              <select id="{{ fid }}" name="{{ f.entry }}"{% if f.required %} required{% endif %}>
+                <option value="" selected disabled>Choose one</option>
+                {%- for o in f.options %}<option value="{{ o }}">{{ o }}</option>{% endfor %}
+              </select>
+              {%- elif f.type == "textarea" %}
+              <textarea id="{{ fid }}" name="{{ f.entry }}" rows="3"></textarea>
+              {%- else %}
+              <input id="{{ fid }}" name="{{ f.entry }}" type="{{ f.type }}"{% if f.autocomplete %} autocomplete="{{ f.autocomplete }}"{% endif %}{% if f.pattern %} pattern="{{ f.pattern }}" title="Enter a valid phone number."{% endif %}{% if f.help %} aria-describedby="{{ fid }}-help"{% endif %}{% if f.required %} required{% endif %}>
+              {%- endif %}
+              {%- if f.help %}<small id="{{ fid }}-help">{{ f.help }}</small>{% endif %}
+            </div>
+            {%- endif %}
+          {%- endfor %}
+          </div>
+          <input type="hidden" name="fvv" value="1">
+          <input type="hidden" name="pageHistory" value="0">
+          <div class="lead__trap" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <p class="lead__error" data-lead-error role="alert" hidden>That did not go through. Please email <a href="mailto:{{ site.email }}?subject=HelioLattice%20demo%20request">{{ site.email }}</a> and we will arrange your demo.</p>
+          <button class="btn btn--primary btn--lg lead__submit" type="submit" data-lead-submit>Request my demo</button>
+          <p class="lead__note">We use these details only to arrange your demo. See our <a href="/legal/privacy/">privacy policy</a>.</p>
+          <noscript><p class="lead__note">This form needs JavaScript. You can also write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p></noscript>
+        </form>
+        <div class="lead__success" data-lead-success hidden>
+          <h3>Request received.</h3>
+          <p>Thank you. We will reply by email with available times. Bring a few open jobs, and we will show HelioLattice on your own work.</p>
+          <p><a href="/product/">Browse the product while you wait</a></p>
+        </div>
+        <iframe name="lead-sink" title="Form submission target" hidden width="0" height="0" tabindex="-1"></iframe>
+      </div>
       <dl class="request__facts">
         <div><dt>Format</dt><dd>Live session on your jobs</dd></div>
         <div><dt>Bring</dt><dd>3 to 5 real open jobs</dd></div>
@@ -104,3 +145,5 @@ crumbs:
 
 {% set cta = { title: "Ready to see your jobs in HelioLattice?", body: "Send your request and we will reply with times that suit you.", secondaryHref: "/product/", secondaryLabel: "Browse the product first" } %}
 {% include "partials/cta.njk" %}
+
+<script src="/js/lead-form.js" defer></script>

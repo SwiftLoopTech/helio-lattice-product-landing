@@ -1,0 +1,14 @@
+{
+  "action": "https://docs.google.com/forms/d/e/1FAIpQLSegi7ZwPMba3ka1cwvlf9ATFNKNZ3StYBd8hKfgrOXVSjCypA/formResponse",
+  "fields": [
+    { "entry": "entry.1098891983", "name": "company", "label": "Company name", "type": "text", "required": true, "autocomplete": "organization", "half": true },
+    { "entry": "entry.1984688009", "name": "location", "label": "City and state", "type": "text", "required": true, "autocomplete": "address-level2", "half": true },
+    { "entry": "entry.1365847242", "name": "person", "label": "Your name", "type": "text", "required": true, "autocomplete": "name", "half": true },
+    { "entry": "entry.1738014259", "name": "role", "label": "Your role", "type": "select", "required": true, "half": true, "options": ["Owner or director", "Sales head", "Operations head", "Accounts", "Other"] },
+    { "entry": "entry.1478875519", "name": "email", "label": "Work email", "type": "email", "required": true, "autocomplete": "email", "half": true },
+    { "entry": "entry.77813101", "name": "phone", "label": "Phone or WhatsApp number", "type": "tel", "required": true, "autocomplete": "tel", "half": true, "pattern": "[0-9+ ()\\-]{8,16}", "help": "Include the country code if outside India." },
+    { "entry": "entry.1131442109", "name": "jobs", "label": "Approximate number of open jobs", "type": "select", "required": true, "options": ["Under 20", "20 to 50", "51 to 150", "Over 150"] },
+    { "entry": "entry.875512129", "name": "focus", "label": "What do you do mostly", "type": "checkbox", "required": false, "options": ["Residential", "Commercial", "Industrial", "Channel partner network"] },
+    { "entry": "entry.179720708", "name": "notes", "label": "What would you like to see in the demo", "type": "textarea", "required": false }
+  ]
+}
