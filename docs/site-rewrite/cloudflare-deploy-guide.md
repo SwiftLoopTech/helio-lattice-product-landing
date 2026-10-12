@@ -99,3 +99,8 @@ Via git: `git revert -m 1 <merge commit>` on `main` and push, or redeploy tag `o
 - The root `wrangler.jsonc` points at `website-static/dist`. If you ever need to deploy the old React site again, restore it from tag `old-react-site`.
 - `npm audit` reports advisories in Eleventy's build-time dependencies. They do not ship to visitors. Review them when upgrading Eleventy.
 - A change to `site.json` (form URL, IDs) needs a rebuild, which happens on every push.
+
+## Redirects file
+
+`website-static/public/_redirects` must contain only rules, one per line (`/old /new 301`). Cloudflare's parser rejects `#` comment lines (build failed with "Expected exactly 2 or 3 whitespace-separated tokens"). Why the rules exist: `html_handling` is auto-trailing-slash, so `/about` would otherwise 307 to `/about/`; the 301s keep already-indexed URLs permanent. The old `/guides/*` cluster was never indexed and is intentionally not redirected.
+
